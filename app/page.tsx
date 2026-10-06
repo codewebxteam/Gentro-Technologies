@@ -184,21 +184,21 @@ export default function Home() {
       name: "Rahul Sharma",
       role: "E-commerce Business Owner",
       rating: 5,
-      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80"
+      initials: "RS",
     },
     {
       quote: "API integration bahut easy tha aur support team hamesha available rehti hai. Ab hum apne offers directly customers tak pahuncha pa rahe hain.",
       name: "Priya Verma",
       role: "Retail Store Owner",
       rating: 5,
-      avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80"
+      initials: "PV",
     },
     {
       quote: "Sirf 15 paise per message mein itna powerful platform milna amazing hai. Hamari sales clearly badhi hai aur customer repeat rate bhi.",
       name: "Amit Kumar",
       role: "Digital Marketing Agency",
       rating: 5,
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80"
+      initials: "AK",
     }
   ];
 
@@ -1020,11 +1020,9 @@ export default function Home() {
 
                   {/* Author */}
                   <div className="flex items-center gap-3 pt-3 border-t border-slate-100">
-                    <img
-                      src={t.avatar}
-                      alt={t.name}
-                      className="w-11 h-11 rounded-full object-cover border border-emerald-300"
-                    />
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-emerald-500 to-teal-700 text-white font-bold text-xs sm:text-sm flex items-center justify-center shadow-xs shrink-0 tracking-wider">
+                      {t.initials}
+                    </div>
                     <div>
                       <h4 className="text-sm font-bold text-slate-900">{t.name}</h4>
                       <p className="text-xs text-slate-500">{t.role}</p>
