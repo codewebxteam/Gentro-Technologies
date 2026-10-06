@@ -739,7 +739,13 @@ export default function ContactPage() {
 
           <div className="pt-8 border-t border-slate-800 text-center text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-4">
             <p>© {new Date().getFullYear()} Gentro Technologies. All rights reserved.</p>
-            <p>Built with Enterprise Security & Meta Cloud Standards</p>
+            <div className="flex items-center gap-6">
+              <Link href="/privacy-policy" className="hover:text-emerald-400 transition-colors">Privacy Policy</Link>
+              <span>|</span>
+              <Link href="/terms-and-conditions" className="hover:text-emerald-400 transition-colors">Terms & Conditions</Link>
+              <span>|</span>
+              <Link href="/refund-policy" className="hover:text-emerald-400 transition-colors">Refund Policy</Link>
+            </div>
           </div>
         </div>
       </footer>

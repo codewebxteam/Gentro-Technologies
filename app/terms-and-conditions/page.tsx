@@ -170,7 +170,18 @@ export default function TermsAndConditionsPage() {
 
       {/* Footer */}
       <footer className="bg-[#091E28] text-white py-8 border-t border-slate-800 text-center text-xs text-slate-400">
-        <p>© {new Date().getFullYear()} Gentro Technologies. All rights reserved.</p>
+        <div className="max-w-4xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p>© {new Date().getFullYear()} Gentro Technologies. All rights reserved.</p>
+          <div className="flex items-center gap-4 text-xs text-slate-400">
+            <Link href="/privacy-policy" className="hover:text-emerald-400">Privacy Policy</Link>
+            <span>|</span>
+            <Link href="/terms-and-conditions" className="hover:text-emerald-400">Terms & Conditions</Link>
+            <span>|</span>
+            <Link href="/refund-policy" className="hover:text-emerald-400">Refund Policy</Link>
+            <span>|</span>
+            <Link href="/contact" className="hover:text-emerald-400">Contact Us</Link>
+          </div>
+        </div>
       </footer>
     </div>
   );

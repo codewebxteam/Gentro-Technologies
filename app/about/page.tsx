@@ -522,11 +522,11 @@ export default function AboutPage() {
           <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
             <p>© 2026 Gentro Technologies. All Rights Reserved.</p>
             <div className="flex items-center gap-6">
-              <a href="#" className="hover:text-slate-300 transition-colors">Privacy Policy</a>
+              <Link href="/privacy-policy" className="hover:text-emerald-400 transition-colors">Privacy Policy</Link>
               <span>|</span>
-              <a href="#" className="hover:text-slate-300 transition-colors">Terms & Conditions</a>
+              <Link href="/terms-and-conditions" className="hover:text-emerald-400 transition-colors">Terms & Conditions</Link>
               <span>|</span>
-              <a href="#" className="hover:text-slate-300 transition-colors">Refund Policy</a>
+              <Link href="/refund-policy" className="hover:text-emerald-400 transition-colors">Refund Policy</Link>
             </div>
           </div>
 
