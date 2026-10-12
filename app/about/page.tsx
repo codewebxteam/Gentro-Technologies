@@ -244,7 +244,7 @@ export default function AboutPage() {
                   OUR MISSION & VISION
                 </span>
                 <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-3">
-                  Bade Sapne. Chhote Kharch.
+                  More Reach. Less Cost
                 </h2>
                 <p className="text-slate-600 text-base sm:text-lg mt-2 leading-relaxed">
                   Traditional SMS aur bulk email marketing ka conversion rate lagataar gir raha hai. WhatsApp aaj 98% open rate ke sath Bharat ka number-1 communication channel hai.

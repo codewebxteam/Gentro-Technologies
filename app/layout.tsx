@@ -5,7 +5,7 @@ import "./globals.css";
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  display: "swap",
 });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://gentrotechnologies.com";
@@ -180,17 +180,8 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className={`${plusJakartaSans.variable} scroll-smooth`}>
+    <html lang="en" className={`${plusJakartaSans.variable} scroll-smooth`} suppressHydrationWarning>
       <head>
-        <link
-          rel="icon"
-          href="https://ik.imagekit.io/0s0fb4b2b/Gentro/Glossy%20Gentro%20Technologies%20Logo.png"
-          type="image/png"
-        />
-        <link
-          rel="apple-touch-icon"
-          href="https://ik.imagekit.io/0s0fb4b2b/Gentro/Glossy%20Gentro%20Technologies%20Logo.png"
-        />
         <meta name="geo.region" content="IN-DL" />
         <meta name="geo.placename" content="New Delhi" />
         <script
@@ -206,7 +197,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
         />
       </head>
-      <body className="font-sans antialiased text-slate-800 bg-white selection:bg-emerald-500 selection:text-white">
+      <body className="font-sans antialiased text-slate-800 bg-white selection:bg-emerald-500 selection:text-white" suppressHydrationWarning>
         {children}
       </body>
     </html>

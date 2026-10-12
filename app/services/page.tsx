@@ -816,10 +816,10 @@ print("Response:", response.json())`
               TRANSPARENT PRICING
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-3">
-              Simple, Predictable & High-ROI Plans
+              Powerful WhatsApp API. Lower Messaging Costs.
             </h2>
             <p className="text-slate-600 text-base sm:text-lg mt-2">
-              Get enterprise-grade software and industry-lowest messaging rates without hidden costs.
+              Get the complete WhatsApp Business API software with messaging rates starting at just ₹0.15 per message.
             </p>
           </div>
 
@@ -851,10 +851,6 @@ print("Response:", response.json())`
                 </div>
 
                 <ul className="space-y-3.5 text-sm text-slate-700 mb-8">
-                  <li className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
-                    <span><strong>Unified Multi-Agent Inbox</strong> (Unlimited Team Logins)</span>
-                  </li>
                   <li className="flex items-center gap-3">
                     <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
                     <span><strong>No-Code Chatbot & Flow Builder</strong></span>

@@ -42,16 +42,9 @@ import {
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [copiedKey, setCopiedKey] = useState(false);
   const [activeFaq, setActiveFaq] = useState<number | null>(0);
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
   const [testimonialIndex, setTestimonialIndex] = useState(0);
-
-  const handleCopy = () => {
-    navigator.clipboard.writeText("sk_live_98a72b14e590c8842");
-    setCopiedKey(true);
-    setTimeout(() => setCopiedKey(false), 2000);
-  };
 
   const services = [
     {
@@ -75,14 +68,14 @@ export default function Home() {
       tag: "24/7 Bot"
     },
     {
-      title: "Order & Payment Notifications",
-      description: "Keep customers updated automatically.",
-      icon: ShoppingCart,
+      title: "15 Paisa Messaging",
+      description: "Send WhatsApp messages at just ₹0.15 with 99% delivery rate.",
+      icon: Send,
       bg: "bg-amber-50",
       border: "border-amber-100",
       accent: "bg-amber-500",
       textAccent: "text-amber-600",
-      tag: "Instant Alerts"
+      tag: "₹0.15 / Msg"
     },
     {
       title: "Bulk Campaigns",
@@ -162,9 +155,9 @@ export default function Home() {
     },
     {
       num: 2,
-      title: "Connect & Integrate",
-      desc: "Get API key and integrate with your system.",
-      icon: Settings2,
+      title: "Connect & Activate",
+      desc: "Link your WhatsApp number and activate your account instantly.",
+      icon: Zap,
       color: "bg-blue-500",
       lightColor: "bg-blue-50 border-blue-200"
     },
@@ -204,20 +197,24 @@ export default function Home() {
 
   const faqs = [
     {
-      question: "What is the cost per message and software license?",
-      answer: "Hamara flat messaging rate sirf ₹0.15 (15 paise) per message hai bina kisi hidden charges ke. Complete WhatsApp API & Multi-Agent CRM Software ka annual license sirf ₹7,999 / yearly hai jisme unlimited agent logins aur automation features included hain."
+      question: "What is the cost of Gentro Technologies’ WhatsApp API?",
+      answer: "Our WhatsApp API plan costs ₹7,999 per year. Messaging charges are separate, starting at just ₹0.15 per message."
     },
     {
-      question: "How can I integrate the API?",
-      answer: "Aapko dashboard se instant API key mil jati hai. Hamare REST APIs, Node.js, Python, PHP, Java aur webhook documentation ke saath 5 minute me integrate kar sakte hain."
+      question: "What is the minimum wallet recharge?",
+      answer: "The minimum wallet recharge is ₹1,000 after API activation. Your messaging charges are deducted from your wallet balance as you send messages."
     },
     {
-      question: "Is there any monthly minimum?",
-      answer: "Nahi, koi bhi monthly minimum commitment ya lock-in period nahi hai. Aap flexibly wallet recharge karke use kar sakte hain."
+      question: "Do I need to pay monthly subscription fees?",
+      answer: "No monthly messaging subscription is required. You pay ₹7,999 annually for the plan and recharge your wallet separately to cover messaging usage."
     },
     {
-      question: "Do you provide customer support?",
-      answer: "Ji haan! Hamari dedicated technical support team 24/7 WhatsApp, Email aur Phone par available rehti hai."
+      question: "What types of messages can I send?",
+      answer: "You can send supported marketing campaigns, utility notifications, OTPs, and rich media messages, including images, videos, and PDFs, subject to WhatsApp policies and template requirements."
+    },
+    {
+      question: "Does my wallet balance expire?",
+      answer: "Your wallet balance does not expire, provided this is covered by your applicable wallet terms and conditions."
     }
   ];
 
@@ -354,7 +351,7 @@ export default function Home() {
         {/* Mobile / Phone Hero View - 100% Full Uncropped Image */}
         <div className="block md:hidden relative w-full">
           <img
-            src="https://ik.imagekit.io/0s0fb4b2b/Gentro/WhatsApp%20Marketing,%20More%20Growth.webp"
+            src="https://ik.imagekit.io/0s0fb4b2b/Gentro/WhatsApp%20Marketing,%20More%20Growth.webp?updatedAt=1791813581401"
             alt="WhatsApp Marketing Mobile"
             className="w-full h-auto object-contain block"
           />
@@ -363,7 +360,7 @@ export default function Home() {
             {/* Handwritten Tagline Badge */}
             <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-emerald-100/90 border border-emerald-200 text-emerald-800 text-xs sm:text-sm font-bold tracking-wide shadow-sm backdrop-blur-sm">
               <span className="text-emerald-600">✦</span>
-              <span className="italic font-serif text-sm">Bade Sapne. Chhote Kharch.</span>
+              <span className="italic font-serif text-sm">More Reach. Less Cost</span>
               <span className="text-emerald-600">✦</span>
             </div>
 
@@ -378,9 +375,9 @@ export default function Home() {
               Mein! 😃
             </h1>
 
-            {/* Hindi / Hinglish Description */}
+            {/* English Description */}
             <p className="text-slate-700 text-sm sm:text-base font-medium max-w-sm sm:max-w-md mx-auto leading-relaxed bg-white/70 backdrop-blur-xs rounded-xl p-2 shadow-sm">
-              Smart messaging ka naya tareeka — jahan har message sirf kharch nahi, balki ek nayi opportunity ban jata hai.
+              A smarter way to message — where every message isn't just an expense, but a new opportunity.
             </p>
           </div>
         </div>
@@ -389,7 +386,7 @@ export default function Home() {
         <div className="hidden md:flex relative min-h-[580px] lg:min-h-[640px] items-center pt-12 pb-20 lg:pt-20 lg:pb-28">
           {/* Desktop Background Image - Full Edge-to-Edge Cover */}
           <img
-            src="https://ik.imagekit.io/0s0fb4b2b/Gentro/WhatsApp%20Marketing%20Made%20Simple.webp"
+            src="https://ik.imagekit.io/0s0fb4b2b/Gentro/WhatsApp%20Marketing%20Made%20Simple.webp?updatedAt=1791813581873"
             alt="WhatsApp Marketing Hero Background"
             className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none"
           />
@@ -403,7 +400,7 @@ export default function Home() {
               {/* Handwritten Tagline Badge */}
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-100/90 border border-emerald-200 text-emerald-800 text-xs sm:text-sm font-bold tracking-wide shadow-sm backdrop-blur-sm">
                 <span className="text-emerald-600">✦</span>
-                <span className="italic font-serif text-base">Bade Sapne. Chhote Kharch.</span>
+                <span className="italic font-serif text-base">More Reach. Less Cost</span>
                 <span className="text-emerald-600">✦</span>
               </div>
 
@@ -420,9 +417,9 @@ export default function Home() {
                 Mein! <span className="inline-block hover:scale-125 transition-transform cursor-default">😃</span>
               </h1>
 
-              {/* Hindi / Hinglish Description */}
+              {/* English Description */}
               <p className="text-slate-700 text-base sm:text-lg lg:text-xl font-normal max-w-xl leading-relaxed">
-                Smart messaging ka naya tareeka — jahan har message sirf kharch nahi, balki ek nayi opportunity ban jata hai.
+                A smarter way to message — where every message isn't just an expense, but a new opportunity.
               </p>
 
               {/* 4 Feature Badges Row */}
@@ -432,7 +429,7 @@ export default function Home() {
                     ₹
                   </div>
                   <div className="text-left">
-                    <p className="text-[13px] font-bold text-slate-900 leading-tight">Behtar</p>
+                    <p className="text-[13px] font-bold text-slate-900 leading-tight">Better</p>
                     <p className="text-[11px] text-slate-500">Reach</p>
                   </div>
                 </div>
@@ -442,7 +439,7 @@ export default function Home() {
                     <TrendingUp className="w-4 h-4" />
                   </div>
                   <div className="text-left">
-                    <p className="text-[13px] font-bold text-slate-900 leading-tight">Zyada</p>
+                    <p className="text-[13px] font-bold text-slate-900 leading-tight">Higher</p>
                     <p className="text-[11px] text-slate-500">Engagement</p>
                   </div>
                 </div>
@@ -663,82 +660,34 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            
-            {/* 3 Step Cards */}
-            <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-6 relative">
-              {steps.map((step, idx) => {
-                const Icon = step.icon;
-                return (
-                  <div
-                    key={idx}
-                    className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all relative flex flex-col items-start"
-                  >
-                    {/* Step Number & Icon */}
-                    <div className="flex items-center gap-3 mb-5">
-                      <div className={`w-8 h-8 rounded-full ${step.color} text-white font-bold text-sm flex items-center justify-center shadow`}>
-                        {step.num}
-                      </div>
-                      <div className="w-8 h-8 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center">
-                        <Icon className="w-4 h-4" />
-                      </div>
-                    </div>
-
-                    <h3 className="text-lg font-bold text-slate-900 mb-1">
-                      {step.title}
-                    </h3>
-                    <p className="text-sm text-slate-600">
-                      {step.desc}
-                    </p>
-                  </div>
-                );
-              })}
-            </div>
-
-            {/* Right API Key Interactive Mockup Card */}
-            <div className="lg:col-span-4 bg-gradient-to-br from-slate-900 to-slate-800 text-white rounded-2xl p-6 shadow-xl border border-slate-700">
-              <div className="flex items-center justify-between mb-4 pb-3 border-b border-slate-700">
-                <span className="text-xs font-mono text-emerald-400 font-bold uppercase tracking-wider">
-                  API Key
-                </span>
-                <span className="text-[10px] bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded font-mono">
-                  ACTIVE
-                </span>
-              </div>
-
-              {/* API Key Box */}
-              <div className="bg-slate-950/80 rounded-xl p-3 border border-slate-700 flex items-center justify-between gap-2 mb-5">
-                <span className="font-mono text-xs text-slate-300 truncate">
-                  sk_live_98a72b14e590c8842...
-                </span>
-                <button
-                  onClick={handleCopy}
-                  className="bg-emerald-600 hover:bg-emerald-500 text-white px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-colors shrink-0"
+          {/* 3 Step Cards Grid - Clean & Balanced */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto">
+            {steps.map((step, idx) => {
+              const Icon = step.icon;
+              return (
+                <div
+                  key={idx}
+                  className="bg-white border border-slate-200/90 rounded-2xl p-7 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 relative flex flex-col items-start group"
                 >
-                  {copiedKey ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
-                  <span>{copiedKey ? "Copied" : "Copy"}</span>
-                </button>
-              </div>
+                  {/* Step Number & Icon */}
+                  <div className="flex items-center gap-3 mb-5">
+                    <div className={`w-9 h-9 rounded-full ${step.color} text-white font-bold text-sm flex items-center justify-center shadow-md`}>
+                      {step.num}
+                    </div>
+                    <div className="w-9 h-9 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center group-hover:bg-emerald-50 group-hover:text-emerald-600 transition-colors">
+                      <Icon className="w-4 h-4" />
+                    </div>
+                  </div>
 
-              <div className="space-y-2">
-                <p className="text-xs text-slate-400 font-medium">Integrate with:</p>
-                <div className="flex items-center gap-2">
-                  <div className="flex items-center gap-1.5 bg-slate-800 text-slate-200 text-xs px-2.5 py-1 rounded-md border border-slate-700">
-                    <Globe className="w-3.5 h-3.5 text-blue-400" />
-                    <span>Website</span>
-                  </div>
-                  <div className="flex items-center gap-1.5 bg-slate-800 text-slate-200 text-xs px-2.5 py-1 rounded-md border border-slate-700">
-                    <Database className="w-3.5 h-3.5 text-rose-400" />
-                    <span>CRM</span>
-                  </div>
-                  <div className="flex items-center gap-1.5 bg-slate-800 text-slate-200 text-xs px-2.5 py-1 rounded-md border border-slate-700">
-                    <Smartphone className="w-3.5 h-3.5 text-emerald-400" />
-                    <span>Mobile Apps</span>
-                  </div>
+                  <h3 className="text-xl font-bold text-slate-900 mb-2">
+                    {step.title}
+                  </h3>
+                  <p className="text-sm text-slate-600 leading-relaxed">
+                    {step.desc}
+                  </p>
                 </div>
-              </div>
-            </div>
-
+              );
+            })}
           </div>
 
         </div>
@@ -788,7 +737,7 @@ export default function Home() {
               <div className="lg:col-span-5 flex justify-center lg:justify-end">
                 <div className="relative w-full max-w-[360px] sm:max-w-[420px] drop-shadow-xl hover:scale-105 transition-transform duration-300">
                   <img
-                    src="https://ik.imagekit.io/0s0fb4b2b/Gentro/WhatsApp%20Per-Message%20Cost%20Badge.webp"
+                    src="https://ik.imagekit.io/0s0fb4b2b/Gentro/WhatsApp%20Per-Message%20Cost%20Badge.webp?updatedAt=1791813581811"
                     alt="Just ₹0.15 Per Message Cost Badge"
                     className="w-full h-auto object-contain"
                   />
@@ -810,10 +759,10 @@ export default function Home() {
               TRANSPARENT PRICING
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-3">
-              Simple, Predictable & High-ROI Plans
+              Powerful WhatsApp API. Lower Messaging Costs.
             </h2>
             <p className="text-slate-600 text-base sm:text-lg mt-2">
-              Complete software solution aur industry-lowest messaging rate ek saath.
+              Get the complete WhatsApp Business API software with messaging rates starting at just ₹0.15 per message.
             </p>
           </div>
 
@@ -845,10 +794,6 @@ export default function Home() {
                 </div>
 
                 <ul className="space-y-3.5 text-sm text-slate-700 mb-8">
-                  <li className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
-                    <span><strong>Unified Multi-Agent Inbox</strong> (Unlimited Team Logins)</span>
-                  </li>
                   <li className="flex items-center gap-3">
                     <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
                     <span><strong>No-Code Chatbot & Flow Automation Builder</strong></span>
@@ -951,6 +896,162 @@ export default function Home() {
             </div>
 
           </div>
+        </div>
+      </section>
+
+      {/* ========================================================= */}
+      {/* PRICE COMPARISON SECTION */}
+      {/* ========================================================= */}
+      <section className="py-20 bg-[#E8F8EE]/70 relative border-t border-emerald-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <span className="text-xs font-bold uppercase tracking-widest text-emerald-800 bg-emerald-100/90 border border-emerald-200 px-3.5 py-1.5 rounded-full">
+              PRICE COMPARISON
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-3">
+              Stop Overpaying for WhatsApp Marketing
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg mt-2">
+              See how Gentro Technologies compares to other WhatsApp API platforms.
+            </p>
+          </div>
+
+          {/* Card Comparison Container */}
+          <div className="max-w-xl mx-auto">
+            {/* Top Card: Gentro Technologies (Highlighted with red/coral border) */}
+            <div className="relative rounded-3xl bg-white border-2 border-[#FF4E4E] p-7 sm:p-9 text-center shadow-xl">
+              {/* Top Pill Badge */}
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-slate-100 border border-slate-200 text-xs sm:text-sm font-bold text-slate-800 shadow-xs mb-3">
+                <img
+                  src="https://ik.imagekit.io/0s0fb4b2b/Gentro/Glossy%20Gentro%20Technologies%20Logo.png"
+                  alt="Gentro Technologies"
+                  className="h-4 w-auto object-contain"
+                />
+                <span className="font-extrabold text-slate-900">Gentro</span>
+                <span className="text-slate-400">×</span>
+                <div className="flex items-center gap-1 text-[#0081FB]">
+                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M16.96 5.86c-1.74 0-3.32.8-4.96 2.45-1.64-1.65-3.22-2.45-4.96-2.45-3.3 0-6.04 2.87-6.04 6.74 0 4.13 2.74 7.02 6.04 7.02 1.83 0 3.39-.85 4.96-2.5 1.57 1.65 3.13 2.5 4.96 2.5 3.3 0 6.04-2.89 6.04-7.02 0-3.87-2.74-6.74-6.04-6.74zm-9.92 11.23c-2.07 0-3.88-1.93-3.88-4.49 0-2.47 1.81-4.22 3.88-4.22 1.34 0 2.53.69 3.84 2.15-1.42 2.76-2.6 6.56-3.84 6.56zm9.92 0c-1.24 0-2.42-3.8-3.84-6.56 1.31-1.46 2.5-2.15 3.84-2.15 2.07 0 3.88 1.75 3.88 4.22 0 2.56-1.81 4.49-3.88 4.49z"/>
+                  </svg>
+                  <span className="font-bold">Meta</span>
+                </div>
+              </div>
+
+              <p className="text-xs sm:text-sm font-semibold text-slate-600">
+                Official WhatsApp Business API
+              </p>
+
+              {/* Big Bold Price */}
+              <div className="my-2.5">
+                <span className="text-5xl sm:text-6xl font-black text-slate-900 tracking-tight">₹7,999</span>
+                <span className="text-lg sm:text-2xl font-bold text-slate-700">/Year</span>
+              </div>
+
+              <p className="text-sm sm:text-base font-extrabold text-emerald-600">
+                + 0% Markup Fee <span className="text-slate-400 font-normal">•</span> Just ₹0.15 / Message
+              </p>
+
+              {/* Red Action Button Overlapping Bottom */}
+              <div className="absolute left-1/2 -translate-x-1/2 -bottom-6 w-full flex justify-center px-4">
+                <a
+                  href="#contact"
+                  className="inline-flex items-center gap-2 bg-[#FF3838] hover:bg-[#E02828] text-white font-extrabold text-sm sm:text-base px-8 sm:px-10 py-3 sm:py-3.5 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all"
+                >
+                  <span>Get Instant Access</span>
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+              </div>
+            </div>
+
+            {/* 4 Competitors (2x2 Grid) */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-12 pt-2">
+              
+              {/* 1. WATI */}
+              <div className="bg-white rounded-2xl border border-slate-200/90 p-5 sm:p-6 text-center shadow-xs hover:shadow-md transition-shadow">
+                <div className="flex items-center justify-center gap-2 mb-2">
+                  <div className="w-5 h-5 rounded-md bg-[#25D366] text-white flex items-center justify-center text-xs">
+                    💬
+                  </div>
+                  <span className="text-lg sm:text-xl font-black tracking-tight text-slate-900">wati</span>
+                </div>
+                <p className="text-3xl sm:text-4xl font-black text-slate-900">
+                  ₹12,499<span className="text-sm font-medium text-slate-500">/Month</span>
+                </p>
+                <p className="text-xs text-slate-500 font-medium mt-1">Pro plan</p>
+                <p className="text-xs sm:text-sm font-bold text-rose-600 mt-2">
+                  + ₹3,299 per extra user
+                </p>
+              </div>
+
+              {/* 2. INTERAKT */}
+              <div className="bg-white rounded-2xl border border-slate-200/90 p-5 sm:p-6 text-center shadow-xs hover:shadow-md transition-shadow">
+                <div className="flex items-center justify-center gap-2 mb-2">
+                  <div className="w-5 h-5 rounded-md bg-[#00A884] text-white flex items-center justify-center text-xs">
+                    🛍️
+                  </div>
+                  <span className="text-lg sm:text-xl font-black tracking-tight text-slate-900">interakt</span>
+                </div>
+                <p className="text-3xl sm:text-4xl font-black text-slate-900">
+                  ₹12,499<span className="text-sm font-medium text-slate-500">/Quarter</span>
+                </p>
+                <p className="text-xs text-slate-500 font-medium mt-1">Growth plan</p>
+                <p className="text-xs sm:text-sm font-bold text-rose-600 mt-2">
+                  + 10% Markup
+                </p>
+              </div>
+
+              {/* 3. AISENSY */}
+              <div className="bg-white rounded-2xl border border-slate-200/90 p-5 sm:p-6 text-center shadow-xs hover:shadow-md transition-shadow">
+                <div className="flex items-center justify-center gap-2 mb-2">
+                  <div className="w-5 h-5 rounded-md bg-emerald-500 text-white flex items-center justify-center text-xs">
+                    ⚡
+                  </div>
+                  <span className="text-lg sm:text-xl font-black tracking-tight text-slate-900">AiSensy</span>
+                </div>
+                <p className="text-3xl sm:text-4xl font-black text-slate-900">
+                  ₹8,299<span className="text-sm font-medium text-slate-500">/Month</span>
+                </p>
+                <p className="text-xs text-slate-500 font-medium mt-1">Pro plan</p>
+                <p className="text-xs sm:text-sm font-bold text-rose-600 mt-2">
+                  + 20% Markup
+                </p>
+              </div>
+
+              {/* 4. GALLABOX */}
+              <div className="bg-white rounded-2xl border border-slate-200/90 p-5 sm:p-6 text-center shadow-xs hover:shadow-md transition-shadow">
+                <div className="flex items-center justify-center gap-2 mb-2">
+                  <div className="w-5 h-5 rounded-md bg-blue-600 text-white flex items-center justify-center text-xs">
+                    📦
+                  </div>
+                  <span className="text-lg sm:text-xl font-black tracking-tight text-slate-900">gallabox</span>
+                </div>
+                <p className="text-3xl sm:text-4xl font-black text-slate-900">
+                  ₹12,500<span className="text-sm font-medium text-slate-500">/Month</span>
+                </p>
+                <p className="text-xs text-slate-500 font-medium mt-1">Basic plan, billed quarterly</p>
+                <p className="text-xs sm:text-sm font-bold text-rose-600 mt-2">
+                  + 15% Markup
+                </p>
+              </div>
+
+            </div>
+
+            {/* Bottom Proof & Trustline */}
+            <div className="text-center mt-8 space-y-1.5">
+              <p className="text-xs sm:text-sm text-slate-600 font-medium">
+                1-on-1 onboarding and free migration with WhatsApp experts
+              </p>
+              <div className="flex items-center justify-center gap-1.5 text-xs text-slate-500">
+                <span className="text-emerald-500 font-bold">★★★★★</span>
+                <span className="font-semibold text-slate-700">4.8 on Trustpilot</span>
+                <span>•</span>
+                <span className="font-medium">Verified Meta Business Partner</span>
+              </div>
+            </div>
+
+          </div>
+
         </div>
       </section>
 
@@ -1135,16 +1236,12 @@ export default function Home() {
 
               <div className="flex items-center gap-6 sm:gap-8 border-t sm:border-t-0 sm:border-l border-emerald-800/80 pt-4 sm:pt-0 sm:pl-8">
                 <div className="text-center">
-                  <p className="text-2xl sm:text-3xl font-black text-white">1K+</p>
-                  <p className="text-[11px] uppercase tracking-wider text-emerald-300">Businesses</p>
+                  <p className="text-2xl sm:text-3xl font-black text-white">₹7,999</p>
+                  <p className="text-[11px] uppercase tracking-wider text-emerald-300 font-semibold">YEARLY PLAN</p>
                 </div>
                 <div className="text-center">
-                  <p className="text-2xl sm:text-3xl font-black text-white">5M+</p>
-                  <p className="text-[11px] uppercase tracking-wider text-emerald-300">Messages Sent</p>
-                </div>
-                <div className="text-center">
-                  <p className="text-2xl sm:text-3xl font-black text-white">99%</p>
-                  <p className="text-[11px] uppercase tracking-wider text-emerald-300">Success Rate</p>
+                  <p className="text-2xl sm:text-3xl font-black text-white">₹0.15</p>
+                  <p className="text-[11px] uppercase tracking-wider text-emerald-300 font-semibold">STARTING PRICE / MESSAGE</p>
                 </div>
               </div>
             </div>
