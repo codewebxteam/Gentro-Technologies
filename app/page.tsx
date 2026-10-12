@@ -499,11 +499,11 @@ export default function Home() {
       {/* ========================================================= */}
       {/* OUR SERVICES SECTION */}
       {/* ========================================================= */}
-      <section id="services" className="py-20 bg-white relative">
+      <section id="services" className="py-10 sm:py-16 md:py-20 bg-white relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Header & View All */}
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 md:mb-12 gap-6">
             <div>
               <span className="text-xs font-bold uppercase tracking-widest text-emerald-600 bg-emerald-50 border border-emerald-200/60 px-3 py-1 rounded-full">
                 OUR SERVICES
@@ -572,10 +572,10 @@ export default function Home() {
       {/* ========================================================= */}
       {/* WHY BUSINESSES CHOOSE US SECTION */}
       {/* ========================================================= */}
-      <section id="why-us" className="py-20 bg-slate-50/60 relative overflow-hidden border-y border-slate-100">
+      <section id="why-us" className="py-10 sm:py-16 md:py-20 bg-slate-50/60 relative overflow-hidden border-y border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
             {/* Left Image: WhatsApp Marketing Success Trio */}
             <div className="lg:col-span-5 relative flex justify-center items-center">
@@ -645,10 +645,10 @@ export default function Home() {
       {/* ========================================================= */}
       {/* HOW IT WORKS SECTION */}
       {/* ========================================================= */}
-      <section className="py-20 bg-white relative">
+      <section className="py-10 sm:py-16 md:py-20 bg-white relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-8 md:mb-16">
             <span className="text-xs font-bold uppercase tracking-widest text-emerald-600 bg-emerald-50 border border-emerald-200/60 px-3 py-1 rounded-full">
               HOW IT WORKS
             </span>
@@ -696,7 +696,7 @@ export default function Home() {
       {/* ========================================================= */}
       {/* CAMPAIGN BANNER / CTA WITH BADGE */}
       {/* ========================================================= */}
-      <section className="py-10 bg-white">
+      <section className="py-6 sm:py-10 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative rounded-3xl bg-gradient-to-r from-emerald-50 via-teal-50 to-emerald-100/70 border border-emerald-200/80 p-6 sm:p-10 overflow-hidden shadow-lg">
             
@@ -752,9 +752,9 @@ export default function Home() {
       {/* ========================================================= */}
       {/* TRANSPARENT PRICING PLANS */}
       {/* ========================================================= */}
-      <section id="pricing" className="py-20 bg-slate-50 border-t border-slate-200">
+      <section id="pricing" className="py-10 sm:py-16 md:py-20 bg-slate-50 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-8 md:mb-16">
             <span className="text-xs font-bold uppercase tracking-widest text-emerald-600 bg-emerald-100/80 border border-emerald-200 px-3.5 py-1.5 rounded-full">
               TRANSPARENT PRICING
             </span>
@@ -902,10 +902,10 @@ export default function Home() {
       {/* ========================================================= */}
       {/* PRICE COMPARISON SECTION */}
       {/* ========================================================= */}
-      <section className="py-20 bg-[#E8F8EE]/70 relative border-t border-emerald-100">
+      <section className="py-10 sm:py-16 md:py-20 bg-[#E8F8EE]/70 relative border-t border-emerald-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div className="text-center max-w-2xl mx-auto mb-14">
+          <div className="text-center max-w-2xl mx-auto mb-8 md:mb-14">
             <span className="text-xs font-bold uppercase tracking-widest text-emerald-800 bg-emerald-100/90 border border-emerald-200 px-3.5 py-1.5 rounded-full">
               PRICE COMPARISON
             </span>
@@ -1058,10 +1058,10 @@ export default function Home() {
       {/* ========================================================= */}
       {/* TESTIMONIALS SECTION */}
       {/* ========================================================= */}
-      <section id="testimonials" className="py-20 bg-slate-50/50 relative border-t border-slate-100">
+      <section id="testimonials" className="py-10 sm:py-16 md:py-20 bg-slate-50/50 relative border-t border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 md:mb-12 gap-4">
             <div>
               <span className="text-xs font-bold uppercase tracking-widest text-emerald-600 bg-emerald-50 border border-emerald-200/60 px-3 py-1 rounded-full">
                 TESTIMONIALS
@@ -1140,10 +1140,10 @@ export default function Home() {
       {/* ========================================================= */}
       {/* FAQ SECTION */}
       {/* ========================================================= */}
-      <section className="py-20 bg-white relative">
+      <section className="py-10 sm:py-16 md:py-20 bg-white relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             
             {/* Left Header Info */}
             <div className="lg:col-span-5 space-y-4">
@@ -1207,7 +1207,7 @@ export default function Home() {
       {/* ========================================================= */}
       {/* PRE-FOOTER BANNER (STATS & CTA) */}
       {/* ========================================================= */}
-      <section className="bg-[#04282B] text-white py-12 relative overflow-hidden">
+      <section className="bg-[#04282B] text-white py-8 sm:py-12 relative overflow-hidden">
         {/* Background glow */}
         <div className="absolute top-0 right-1/4 w-80 h-80 bg-emerald-500/20 rounded-full blur-3xl pointer-events-none" />
 
@@ -1253,7 +1253,7 @@ export default function Home() {
       {/* ========================================================= */}
       {/* FOOTER */}
       {/* ========================================================= */}
-      <footer id="contact" className="bg-[#03151E] text-slate-400 pt-16 pb-12 border-t border-slate-800">
+      <footer id="contact" className="bg-[#03151E] text-slate-400 pt-10 sm:pt-16 pb-8 sm:pb-12 border-t border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
