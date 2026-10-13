@@ -89,6 +89,9 @@ export default function AboutPage() {
             <Link href="/services" className="hover:text-emerald-600 transition-colors">
               Services
             </Link>
+            <Link href="/pricing" className="hover:text-emerald-600 transition-colors">
+              Pricing
+            </Link>
             <Link href="/about" className="text-emerald-600 font-semibold transition-colors hover:text-emerald-700 relative py-1">
               About Us
               <span className="absolute bottom-0 left-0 w-full h-0.5 bg-emerald-600 rounded-full"></span>
@@ -139,6 +142,13 @@ export default function AboutPage() {
                 className="hover:text-emerald-600"
               >
                 Services
+              </Link>
+              <Link
+                href="/pricing"
+                onClick={() => setMobileMenuOpen(false)}
+                className="hover:text-emerald-600"
+              >
+                Pricing
               </Link>
               <Link
                 href="/about"
@@ -436,6 +446,7 @@ export default function AboutPage() {
               <ul className="space-y-2 text-xs">
                 <li><Link href="/" className="hover:text-emerald-400 transition-colors">Home</Link></li>
                 <li><Link href="/services" className="hover:text-emerald-400 transition-colors">Services</Link></li>
+                <li><Link href="/pricing" className="hover:text-emerald-400 transition-colors">Pricing</Link></li>
                 <li><Link href="/about" className="hover:text-emerald-400 transition-colors">About Us</Link></li>
                 <li><Link href="/contact" className="hover:text-emerald-400 transition-colors">Contact</Link></li>
               </ul>

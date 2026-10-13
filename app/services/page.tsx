@@ -173,6 +173,9 @@ print("Response:", response.json())`
               Services
               <span className="absolute bottom-0 left-0 w-full h-0.5 bg-emerald-600 rounded-full"></span>
             </Link>
+            <Link href="/pricing" className="hover:text-emerald-600 transition-colors">
+              Pricing
+            </Link>
             <Link href="/about" className="hover:text-emerald-600 transition-colors">
               About Us
             </Link>
@@ -222,6 +225,13 @@ print("Response:", response.json())`
                 className="text-emerald-600 hover:text-emerald-700 font-bold"
               >
                 Services
+              </Link>
+              <Link
+                href="/pricing"
+                onClick={() => setMobileMenuOpen(false)}
+                className="hover:text-emerald-600"
+              >
+                Pricing
               </Link>
               <Link
                 href="/about"
@@ -1159,6 +1169,7 @@ print("Response:", response.json())`
               <ul className="space-y-2 text-xs">
                 <li><Link href="/" className="hover:text-emerald-400 transition-colors">Home</Link></li>
                 <li><Link href="/services" className="hover:text-emerald-400 transition-colors">Services</Link></li>
+                <li><Link href="/pricing" className="hover:text-emerald-400 transition-colors">Pricing</Link></li>
                 <li><Link href="/about" className="hover:text-emerald-400 transition-colors">About Us</Link></li>
                 <li><Link href="/contact" className="hover:text-emerald-400 transition-colors">Contact</Link></li>
               </ul>
