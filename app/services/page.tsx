@@ -282,16 +282,16 @@ print("Response:", response.json())`
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.15]">
-              Scale Conversions With <br />
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.12]">
+              More Reach. <br />
               <span className="bg-gradient-to-r from-emerald-400 via-teal-300 to-[#00D084] bg-clip-text text-transparent">
-                WhatsApp API & Smart CRM
+                Less Cost.
               </span>
             </h1>
 
             {/* Subtitle */}
-            <p className="text-slate-300 text-base sm:text-lg lg:text-xl font-normal leading-relaxed">
-              Power your business communication with high-throughput WhatsApp Cloud API, AI Chatbots, and a unified Multi-Agent CRM Inbox designed for hyper-growth.
+            <p className="text-slate-300 text-base sm:text-lg lg:text-xl font-normal leading-relaxed max-w-2xl mx-auto">
+              Connect with millions of customers directly on WhatsApp at industry-lowest rates starting at just ₹0.15 per message. Automate broadcasts, alerts, and customer interactions with high-speed Official Meta WhatsApp API and smart CRM tools.
             </p>
 
             {/* CTA Buttons */}
@@ -306,33 +306,143 @@ print("Response:", response.json())`
                 <span>Book Free Demo</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
-
-              <a
-                href="#developer-api"
-                className="inline-flex items-center gap-2.5 text-slate-200 hover:text-white font-semibold text-base px-7 py-4 rounded-full border border-slate-700 hover:border-emerald-400/60 bg-white/5 backdrop-blur-md transition-all"
-              >
-                <Code2 className="w-4 h-4 text-emerald-400" />
-                <span>Explore API Docs</span>
-              </a>
             </div>
 
-            {/* Quick Metrics */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-10 border-t border-slate-800/80 max-w-4xl mx-auto">
-              <div className="text-center p-3 rounded-2xl bg-white/5 border border-white/5">
-                <p className="text-2xl sm:text-3xl font-black text-[#00D084]">₹0.15</p>
-                <p className="text-xs text-slate-400 uppercase tracking-wider mt-1">Starting Cost / Msg</p>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================= */}
+      {/* CORE PILLARS: VALUES THAT DRIVE GENTRO TECHNOLOGIES */}
+      {/* ========================================================= */}
+      <section className="py-16 sm:py-20 bg-gradient-to-b from-slate-50 via-white to-slate-50 border-b border-slate-200 relative overflow-hidden">
+        {/* Decorative blur elements */}
+        <div className="absolute top-0 left-1/4 w-72 h-72 bg-emerald-100/50 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-blue-100/50 rounded-full blur-3xl pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          {/* Section Header */}
+          <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 space-y-3">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold tracking-wider uppercase">
+              <Sparkles className="w-3.5 h-3.5 text-emerald-500" />
+              <span>CORE PILLARS</span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
+              Values That Drive Gentro Technologies
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
+              Our engineering and customer service operate on four fundamental principles designed for sustainable, high-ROI business growth.
+            </p>
+          </div>
+
+          {/* 4 Colorful Cards Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            {/* Pillar 1: Cost-Effective Innovation (Emerald Theme) */}
+            <div className="relative rounded-2xl bg-white border-2 border-emerald-200/80 shadow-md hover:shadow-xl hover:shadow-emerald-500/10 transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between overflow-hidden group">
+              <div className="h-2 w-full bg-gradient-to-r from-emerald-400 via-teal-400 to-[#00D084]" />
+              <div className="p-6 sm:p-7 flex-1 flex flex-col">
+                <div className="flex items-center justify-between mb-5">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 text-white flex items-center justify-center shadow-lg shadow-emerald-500/30 group-hover:scale-110 transition-transform">
+                    <Zap className="w-6 h-6" />
+                  </div>
+                  <span className="text-xs font-black text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-full shadow-sm">
+                    ₹0.15 / Msg
+                  </span>
+                </div>
+                <h3 className="text-xl font-extrabold text-slate-900 mb-2 group-hover:text-emerald-700 transition-colors">
+                  Cost-Effective Innovation
+                </h3>
+                <p className="text-sm text-slate-600 leading-relaxed flex-1">
+                  We make business messaging truly affordable for every enterprise — delivering enterprise-grade WhatsApp API infrastructure at just <strong className="text-slate-900">₹0.15 (15 paise) per message</strong> and all-inclusive software for <strong className="text-slate-900">₹7,999/year</strong> with zero hidden markups.
+                </p>
               </div>
-              <div className="text-center p-3 rounded-2xl bg-white/5 border border-white/5">
-                <p className="text-2xl sm:text-3xl font-black text-white">99.9%</p>
-                <p className="text-xs text-slate-400 uppercase tracking-wider mt-1">Uptime SLA</p>
+              <div className="px-6 pb-6 pt-2 border-t border-slate-100 bg-emerald-50/30">
+                <span className="text-xs font-semibold text-emerald-700 flex items-center gap-1.5">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                  Industry-Lowest Messaging Cost
+                </span>
               </div>
-              <div className="text-center p-3 rounded-2xl bg-white/5 border border-white/5">
-                <p className="text-2xl sm:text-3xl font-black text-white">&lt; 2 Mins</p>
-                <p className="text-xs text-slate-400 uppercase tracking-wider mt-1">Instant Activation</p>
+            </div>
+
+            {/* Pillar 2: Zero-Downtime Reliability (Blue Theme) */}
+            <div className="relative rounded-2xl bg-white border-2 border-blue-200/80 shadow-md hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between overflow-hidden group">
+              <div className="h-2 w-full bg-gradient-to-r from-blue-400 via-sky-400 to-cyan-500" />
+              <div className="p-6 sm:p-7 flex-1 flex flex-col">
+                <div className="flex items-center justify-between mb-5">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-600 text-white flex items-center justify-center shadow-lg shadow-blue-500/30 group-hover:scale-110 transition-transform">
+                    <Activity className="w-6 h-6" />
+                  </div>
+                  <span className="text-xs font-black text-blue-700 bg-blue-50 border border-blue-200 px-3 py-1 rounded-full shadow-sm">
+                    99.9% Uptime
+                  </span>
+                </div>
+                <h3 className="text-xl font-extrabold text-slate-900 mb-2 group-hover:text-blue-700 transition-colors">
+                  Zero-Downtime Reliability
+                </h3>
+                <p className="text-sm text-slate-600 leading-relaxed flex-1">
+                  Powered directly by the <strong className="text-slate-900">Official Meta Cloud API</strong> with a 99.9% guaranteed uptime SLA. Your mission-critical OTPs, transactional alerts, and promotional broadcasts deliver instantly with zero latency or delays.
+                </p>
               </div>
-              <div className="text-center p-3 rounded-2xl bg-white/5 border border-white/5">
-                <p className="text-2xl sm:text-3xl font-black text-[#00D084]">100%</p>
-                <p className="text-xs text-slate-400 uppercase tracking-wider mt-1">Official Meta API</p>
+              <div className="px-6 pb-6 pt-2 border-t border-slate-100 bg-blue-50/30">
+                <span className="text-xs font-semibold text-blue-700 flex items-center gap-1.5">
+                  <CheckCircle2 className="w-4 h-4 text-blue-600" />
+                  Sub-second Latency SLA
+                </span>
+              </div>
+            </div>
+
+            {/* Pillar 3: Enterprise-Grade Security (Purple Theme) */}
+            <div className="relative rounded-2xl bg-white border-2 border-purple-200/80 shadow-md hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between overflow-hidden group">
+              <div className="h-2 w-full bg-gradient-to-r from-purple-500 via-violet-500 to-indigo-500" />
+              <div className="p-6 sm:p-7 flex-1 flex flex-col">
+                <div className="flex items-center justify-between mb-5">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-indigo-600 text-white flex items-center justify-center shadow-lg shadow-purple-500/30 group-hover:scale-110 transition-transform">
+                    <ShieldCheck className="w-6 h-6" />
+                  </div>
+                  <span className="text-xs font-black text-purple-700 bg-purple-50 border border-purple-200 px-3 py-1 rounded-full shadow-sm">
+                    100% Secure
+                  </span>
+                </div>
+                <h3 className="text-xl font-extrabold text-slate-900 mb-2 group-hover:text-purple-700 transition-colors">
+                  Enterprise-Grade Security
+                </h3>
+                <p className="text-sm text-slate-600 leading-relaxed flex-1">
+                  Built with end-to-end data encryption and strict privacy protocols. Our platform fully complies with international data security standards, keeping your customer contacts and conversations <strong className="text-slate-900">100% protected</strong>.
+                </p>
+              </div>
+              <div className="px-6 pb-6 pt-2 border-t border-slate-100 bg-purple-50/30">
+                <span className="text-xs font-semibold text-purple-700 flex items-center gap-1.5">
+                  <CheckCircle2 className="w-4 h-4 text-purple-600" />
+                  Bank-Grade Encryption
+                </span>
+              </div>
+            </div>
+
+            {/* Pillar 4: Dedicated Human Support (Amber Theme) */}
+            <div className="relative rounded-2xl bg-white border-2 border-amber-200/80 shadow-md hover:shadow-xl hover:shadow-amber-500/10 transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between overflow-hidden group">
+              <div className="h-2 w-full bg-gradient-to-r from-amber-400 via-orange-400 to-rose-400" />
+              <div className="p-6 sm:p-7 flex-1 flex flex-col">
+                <div className="flex items-center justify-between mb-5">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 text-white flex items-center justify-center shadow-lg shadow-amber-500/30 group-hover:scale-110 transition-transform">
+                    <Headphones className="w-6 h-6" />
+                  </div>
+                  <span className="text-xs font-black text-amber-700 bg-amber-50 border border-amber-200 px-3 py-1 rounded-full shadow-sm">
+                    24/7 Support
+                  </span>
+                </div>
+                <h3 className="text-xl font-extrabold text-slate-900 mb-2 group-hover:text-amber-700 transition-colors">
+                  Dedicated Human Support
+                </h3>
+                <p className="text-sm text-slate-600 leading-relaxed flex-1">
+                  Beyond automated chatbots, our dedicated technical engineers are always ready round-the-clock to provide hands-on assistance — from <strong className="text-slate-900">Meta API verification and onboarding</strong> to live campaign execution.
+                </p>
+              </div>
+              <div className="px-6 pb-6 pt-2 border-t border-slate-100 bg-amber-50/30">
+                <span className="text-xs font-semibold text-amber-700 flex items-center gap-1.5">
+                  <CheckCircle2 className="w-4 h-4 text-amber-600" />
+                  Round-The-Clock Engineers
+                </span>
               </div>
             </div>
 
@@ -754,67 +864,7 @@ print("Response:", response.json())`
         </div>
       )}
 
-      {/* ========================================================= */}
-      {/* HOW IT WORKS / ONBOARDING PROCESS */}
-      {/* ========================================================= */}
-      <section className="py-20 bg-slate-50 border-y border-slate-200/80">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-xs font-bold uppercase tracking-widest text-emerald-600 bg-emerald-100/80 border border-emerald-200 px-3.5 py-1.5 rounded-full">
-              SIMPLE ONBOARDING
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-3">
-              Go Live in Less Than 2 Minutes
-            </h2>
-            <p className="text-slate-600 text-base sm:text-lg mt-2">
-              No complicated technical delays. We handle everything from number verification to template approvals.
-            </p>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-            {/* Step 1 */}
-            <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all relative">
-              <div className="w-12 h-12 rounded-xl bg-emerald-500 text-white font-black text-xl flex items-center justify-center mb-6 shadow-md">
-                1
-              </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-2">
-                Register & Verify Number
-              </h3>
-              <p className="text-sm text-slate-600 leading-relaxed">
-                Connect your brand phone number or use a fresh virtual number through official Meta embedded signup.
-              </p>
-            </div>
-
-            {/* Step 2 */}
-            <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all relative">
-              <div className="w-12 h-12 rounded-xl bg-teal-500 text-white font-black text-xl flex items-center justify-center mb-6 shadow-md">
-                2
-              </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-2">
-                Choose API or CRM Inbox
-              </h3>
-              <p className="text-sm text-slate-600 leading-relaxed">
-                Get your instant API key for backend code or invite your sales team to our multi-agent CRM portal.
-              </p>
-            </div>
-
-            {/* Step 3 */}
-            <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all relative">
-              <div className="w-12 h-12 rounded-xl bg-[#091E28] text-emerald-400 font-black text-xl flex items-center justify-center mb-6 shadow-md">
-                3
-              </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-2">
-                Launch & Scale Campaigns
-              </h3>
-              <p className="text-sm text-slate-600 leading-relaxed">
-                Send broadcasts, trigger automated workflows, and watch your business revenue grow at ₹0.15/msg.
-              </p>
-            </div>
-          </div>
-
-        </div>
-      </section>
 
       {/* ========================================================= */}
       {/* TRANSPARENT PRICING PLANS */}
