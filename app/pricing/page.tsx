@@ -160,9 +160,6 @@ export default function PricingPage() {
               Pricing
               <span className="absolute bottom-0 left-0 w-full h-0.5 bg-emerald-600 rounded-full"></span>
             </Link>
-            <Link href="/about" className="hover:text-emerald-600 transition-colors">
-              About Us
-            </Link>
             <Link href="/contact" className="hover:text-emerald-600 transition-colors">
               Contact
             </Link>
@@ -216,13 +213,6 @@ export default function PricingPage() {
                 className="text-emerald-600 font-bold"
               >
                 Pricing
-              </Link>
-              <Link
-                href="/about"
-                onClick={() => setMobileMenuOpen(false)}
-                className="hover:text-emerald-600"
-              >
-                About Us
               </Link>
               <Link
                 href="/contact"
@@ -1008,7 +998,6 @@ export default function PricingPage() {
                 <li><Link href="/" className="hover:text-emerald-400 transition-colors">Home</Link></li>
                 <li><Link href="/services" className="hover:text-emerald-400 transition-colors">Services</Link></li>
                 <li><Link href="/pricing" className="text-emerald-400 font-bold hover:text-emerald-300 transition-colors">Pricing</Link></li>
-                <li><Link href="/about" className="hover:text-emerald-400 transition-colors">About Us</Link></li>
                 <li><Link href="/contact" className="hover:text-emerald-400 transition-colors">Contact</Link></li>
               </ul>
             </div>

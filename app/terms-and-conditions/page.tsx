@@ -33,9 +33,6 @@ export default function TermsAndConditionsPage() {
             <Link href="/pricing" className="hover:text-emerald-600 transition-colors">
               Pricing
             </Link>
-            <Link href="/about" className="hover:text-emerald-600 transition-colors">
-              About Us
-            </Link>
             <Link href="/contact" className="hover:text-emerald-600 transition-colors">
               Contact
             </Link>

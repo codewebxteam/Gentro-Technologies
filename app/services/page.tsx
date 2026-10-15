@@ -176,9 +176,6 @@ print("Response:", response.json())`
             <Link href="/pricing" className="hover:text-emerald-600 transition-colors">
               Pricing
             </Link>
-            <Link href="/about" className="hover:text-emerald-600 transition-colors">
-              About Us
-            </Link>
             <Link href="/contact" className="hover:text-emerald-600 transition-colors">
               Contact
             </Link>
@@ -232,13 +229,6 @@ print("Response:", response.json())`
                 className="hover:text-emerald-600"
               >
                 Pricing
-              </Link>
-              <Link
-                href="/about"
-                onClick={() => setMobileMenuOpen(false)}
-                className="hover:text-emerald-600"
-              >
-                About Us
               </Link>
               <Link
                 href="/contact"
@@ -991,7 +981,6 @@ print("Response:", response.json())`
                 <li><Link href="/" className="hover:text-emerald-400 transition-colors">Home</Link></li>
                 <li><Link href="/services" className="hover:text-emerald-400 transition-colors">Services</Link></li>
                 <li><Link href="/pricing" className="hover:text-emerald-400 transition-colors">Pricing</Link></li>
-                <li><Link href="/about" className="hover:text-emerald-400 transition-colors">About Us</Link></li>
                 <li><Link href="/contact" className="hover:text-emerald-400 transition-colors">Contact</Link></li>
               </ul>
             </div>

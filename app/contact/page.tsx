@@ -91,9 +91,6 @@ export default function ContactPage() {
             <Link href="/pricing" className="hover:text-emerald-600 transition-colors">
               Pricing
             </Link>
-            <Link href="/about" className="hover:text-emerald-600 transition-colors">
-              About Us
-            </Link>
             <Link href="/contact" className="text-emerald-600 font-semibold relative py-1">
               Contact
               <span className="absolute bottom-0 left-0 w-full h-0.5 bg-emerald-600 rounded-full"></span>
@@ -174,13 +171,6 @@ export default function ContactPage() {
                 className="px-3 py-2 rounded-lg hover:bg-slate-50 hover:text-emerald-600 transition-colors"
               >
                 Pricing
-              </Link>
-              <Link
-                href="/about"
-                onClick={() => setMobileMenuOpen(false)}
-                className="px-3 py-2 rounded-lg hover:bg-slate-50 hover:text-emerald-600 transition-colors"
-              >
-                About Us
               </Link>
               <Link
                 href="/contact"
@@ -692,7 +682,6 @@ export default function ContactPage() {
                 <li><Link href="/" className="hover:text-emerald-400 transition-colors">Home</Link></li>
                 <li><Link href="/services" className="hover:text-emerald-400 transition-colors">Services</Link></li>
                 <li><Link href="/pricing" className="hover:text-emerald-400 transition-colors">Pricing</Link></li>
-                <li><Link href="/about" className="hover:text-emerald-400 transition-colors">About Us</Link></li>
                 <li><Link href="/contact" className="hover:text-emerald-400 transition-colors text-emerald-400 font-semibold">Contact Us</Link></li>
               </ul>
             </div>

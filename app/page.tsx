@@ -267,9 +267,6 @@ export default function Home() {
             <a href="/pricing" className="hover:text-emerald-600 transition-colors">
               Pricing
             </a>
-            <a href="/about" className="hover:text-emerald-600 transition-colors">
-              About Us
-            </a>
             <a href="/contact" className="hover:text-emerald-600 transition-colors">
               Contact
             </a>
@@ -323,13 +320,6 @@ export default function Home() {
                 className="hover:text-emerald-600"
               >
                 Pricing
-              </a>
-              <a
-                href="/about"
-                onClick={() => setMobileMenuOpen(false)}
-                className="hover:text-emerald-600"
-              >
-                About Us
               </a>
               <a
                 href="/contact"
@@ -1293,7 +1283,6 @@ export default function Home() {
                 <li><a href="#" className="hover:text-emerald-400 transition-colors">Home</a></li>
                 <li><a href="/services" className="hover:text-emerald-400 transition-colors">Services</a></li>
                 <li><a href="/pricing" className="hover:text-emerald-400 transition-colors">Pricing</a></li>
-                <li><a href="/about" className="hover:text-emerald-400 transition-colors">About Us</a></li>
                 <li><a href="/contact" className="hover:text-emerald-400 transition-colors">Contact</a></li>
               </ul>
             </div>
