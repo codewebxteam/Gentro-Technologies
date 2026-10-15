@@ -124,24 +124,24 @@ print("Response:", response.json())`
 
   const faqs = [
     {
-      q: "WhatsApp Business API aur Normal WhatsApp Business App mein kya farq hai?",
-      a: "Normal WhatsApp Business App 1 phone tak limited hota hai aur bulk campaign bhejne par number ban ho sakta hai. Gentro WhatsApp API official Meta infrastructure par chalti hai, jisme unlimited bulk messages, multi-agent login, chatbots, aur CRM integrations bina number ban risk ke milte hain."
+      question: "What is the cost of Gentro Technologies’ WhatsApp API?",
+      answer: "Our WhatsApp API plan costs ₹7,999 per year. Messaging charges are separate, starting at just ₹0.15 per message."
     },
     {
-      q: "Gentro CRM se team ke multi-agents ek saath customer chat kaise handle karenge?",
-      a: "Gentro WhatsApp CRM mein 'Unified Team Inbox' milta hai. Ek hi WhatsApp number par aapki poori sales aur support team login kar sakti hai, tickets assign kar sakti hai, internal notes daal sakti hai, aur customer history dekh sakti hai."
+      question: "What is the minimum wallet recharge?",
+      answer: "The minimum wallet recharge is ₹1,000 after API activation. Your messaging charges are deducted from your wallet balance as you send messages."
     },
     {
-      q: "Per message rate kya hai aur software license cost kitna hai?",
-      a: "Gentro Technologies par promotional aur utility messages sirf ₹0.15 (15 paise) per message se start hote hain. Complete WhatsApp API & Multi-Agent CRM Software ka annual license sirf ₹7,999 / yearly hai jisme unlimited agent logins aur chatbot automation included hai."
+      question: "Do I need to pay monthly subscription fees?",
+      answer: "No monthly messaging subscription is required. You pay ₹7,999 annually for the plan and recharge your wallet separately to cover messaging usage."
     },
     {
-      q: "Kya hum Shopify, WooCommerce ya CRM jaise HubSpot/Zoho se connect kar sakte hain?",
-      a: "Haan! Gentro WhatsApp API aur CRM mein readymade webhooks aur REST API support hai. Aap Shopify abandoned cart recovery, automated OTP, order dispatch updates, aur lead sync asaani se 5 minute mein automate kar sakte hain."
+      question: "What types of messages can I send?",
+      answer: "You can send supported marketing campaigns, utility notifications, OTPs, and rich media messages, including images, videos, and PDFs, subject to WhatsApp policies and template requirements."
     },
     {
-      q: "Green Tick Verified Badge ke liye eligibility kaise check karein?",
-      a: "Hamari dedicated onboarding team aapke official Meta Business verification aur WhatsApp Official Business Account (Green Tick) approval process mein end-to-end assist karti hai."
+      question: "Does my wallet balance expire?",
+      answer: "Your wallet balance does not expire, provided this is covered by your applicable wallet terms and conditions."
     }
   ];
 
@@ -953,47 +953,65 @@ print("Response:", response.json())`
       {/* ========================================================= */}
       {/* FAQ SECTION */}
       {/* ========================================================= */}
-      <section className="py-20 bg-slate-50 border-t border-slate-200">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-10 sm:py-16 md:py-20 bg-white relative border-t border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div className="text-center mb-14">
-            <span className="text-xs font-bold uppercase tracking-widest text-emerald-600 bg-emerald-100/80 border border-emerald-200 px-3.5 py-1.5 rounded-full">
-              GOT QUESTIONS?
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-3">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-slate-600 text-base mt-2">
-              Everything you need to know about our WhatsApp API and CRM integrations.
-            </p>
-          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+            
+            {/* Left Header Info */}
+            <div className="lg:col-span-5 space-y-4">
+              <span className="text-xs font-bold uppercase tracking-widest text-emerald-600 bg-emerald-50 border border-emerald-200/60 px-3 py-1 rounded-full">
+                FAQ
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                Frequently Asked Questions
+              </h2>
+              <p className="text-slate-600 text-base">
+                Quick answers to common queries.
+              </p>
 
-          <div className="space-y-4">
-            {faqs.map((faq, idx) => (
-              <div
-                key={idx}
-                className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm transition-all"
-              >
-                <button
-                  onClick={() => setActiveFaq(activeFaq === idx ? null : idx)}
-                  className="w-full px-6 py-5 text-left flex items-center justify-between gap-4 hover:bg-slate-50/50 transition-colors"
+              <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200 mt-6">
+                <p className="text-sm font-bold text-slate-800 mb-1">Still have questions?</p>
+                <p className="text-xs text-slate-600 mb-3">Our team is here to assist you 24/7.</p>
+                <Link
+                  href="/contact"
+                  className="text-xs font-bold text-emerald-600 hover:text-emerald-700 inline-flex items-center gap-1"
                 >
-                  <span className="text-base sm:text-lg font-bold text-slate-900">
-                    {faq.q}
-                  </span>
-                  <ChevronDown
-                    className={`w-5 h-5 text-emerald-600 shrink-0 transition-transform duration-200 ${
-                      activeFaq === idx ? "rotate-180" : ""
-                    }`}
-                  />
-                </button>
-                {activeFaq === idx && (
-                  <div className="px-6 pb-6 pt-1 text-sm sm:text-base text-slate-600 leading-relaxed border-t border-slate-100 bg-slate-50/30">
-                    {faq.a}
-                  </div>
-                )}
+                  <span>Contact support team</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
               </div>
-            ))}
+            </div>
+
+            {/* Right Accordion List */}
+            <div className="lg:col-span-7 space-y-3">
+              {faqs.map((faq, i) => {
+                const isOpen = activeFaq === i;
+                return (
+                  <div
+                    key={i}
+                    className="border border-slate-200 rounded-xl overflow-hidden transition-all bg-white"
+                  >
+                    <button
+                      onClick={() => setActiveFaq(isOpen ? null : i)}
+                      className="w-full text-left p-5 flex items-center justify-between gap-4 font-bold text-slate-800 hover:text-emerald-700 transition-colors"
+                    >
+                      <span>{faq.question}</span>
+                      <span className={`w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center shrink-0 transition-transform ${isOpen ? "rotate-45 bg-emerald-100 text-emerald-700" : ""}`}>
+                        +
+                      </span>
+                    </button>
+
+                    {isOpen && (
+                      <div className="px-5 pb-5 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3 animate-in fade-in duration-200">
+                        {faq.answer}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+
           </div>
 
         </div>
