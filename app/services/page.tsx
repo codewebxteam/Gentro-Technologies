@@ -607,134 +607,6 @@ print("Response:", response.json())`
             </div>
           </section>
 
-          {/* ========================================================= */}
-          {/* DEVELOPER API SNIPPET SECTION */}
-          {/* ========================================================= */}
-          <section id="developer-api" className="py-16 bg-[#03151E] text-white relative overflow-hidden">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                
-                {/* Left Info */}
-                <div className="lg:col-span-5 space-y-6">
-                  <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-bold uppercase tracking-wider">
-                    <Terminal className="w-3.5 h-3.5" />
-                    <span>Developer First Architecture</span>
-                  </div>
-
-                  <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight">
-                    Integrate in 3 Lines of Code
-                  </h2>
-
-                  <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                    Our robust REST APIs let you seamlessly connect your website, ERP, CRM, mobile apps, or backend database with 99.9% uptime SLA and instant webhook alerts.
-                  </p>
-
-                  <div className="space-y-3">
-                    <div className="flex items-center gap-3">
-                      <div className="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
-                        <Check className="w-3.5 h-3.5" />
-                      </div>
-                      <span className="text-sm text-slate-200">SDKs for Node.js, Python, PHP, cURL, Java</span>
-                    </div>
-
-                    <div className="flex items-center gap-3">
-                      <div className="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
-                        <Check className="w-3.5 h-3.5" />
-                      </div>
-                      <span className="text-sm text-slate-200">Real-time webhook events for read receipts & replies</span>
-                    </div>
-
-                    <div className="flex items-center gap-3">
-                      <div className="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
-                        <Check className="w-3.5 h-3.5" />
-                      </div>
-                      <span className="text-sm text-slate-200">Automated rate-limit throttling & automatic retry</span>
-                    </div>
-                  </div>
-
-                  <div className="pt-2">
-                    <Link
-                      href="/#contact"
-                      className="inline-flex items-center gap-2 bg-[#00D084] hover:bg-emerald-400 text-slate-950 font-bold text-sm px-6 py-3.5 rounded-full transition-all shadow-lg group"
-                    >
-                      <span>Get Free API Key</span>
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </Link>
-                  </div>
-                </div>
-
-                {/* Right Code Window */}
-                <div className="lg:col-span-7">
-                  <div className="bg-[#0b212c] border border-slate-700/80 rounded-2xl overflow-hidden shadow-2xl">
-                    {/* Header */}
-                    <div className="flex items-center justify-between px-4 py-3 bg-[#07171e] border-b border-slate-700/80">
-                      <div className="flex items-center gap-2">
-                        <span className="w-3 h-3 rounded-full bg-rose-500/80 inline-block" />
-                        <span className="w-3 h-3 rounded-full bg-amber-500/80 inline-block" />
-                        <span className="w-3 h-3 rounded-full bg-emerald-500/80 inline-block" />
-                        <span className="text-xs font-mono text-slate-400 ml-2">send-message.js</span>
-                      </div>
-
-                      {/* Language Selectors */}
-                      <div className="flex items-center gap-2">
-                        <div className="flex p-0.5 rounded-lg bg-slate-800 border border-slate-700">
-                          <button
-                            onClick={() => setActiveCodeTab("node")}
-                            className={`px-3 py-1 text-xs font-mono rounded-md transition-colors ${
-                              activeCodeTab === "node" ? "bg-emerald-600 text-white" : "text-slate-400 hover:text-white"
-                            }`}
-                          >
-                            Node.js
-                          </button>
-                          <button
-                            onClick={() => setActiveCodeTab("curl")}
-                            className={`px-3 py-1 text-xs font-mono rounded-md transition-colors ${
-                              activeCodeTab === "curl" ? "bg-emerald-600 text-white" : "text-slate-400 hover:text-white"
-                            }`}
-                          >
-                            cURL
-                          </button>
-                          <button
-                            onClick={() => setActiveCodeTab("python")}
-                            className={`px-3 py-1 text-xs font-mono rounded-md transition-colors ${
-                              activeCodeTab === "python" ? "bg-emerald-600 text-white" : "text-slate-400 hover:text-white"
-                            }`}
-                          >
-                            Python
-                          </button>
-                        </div>
-
-                        <button
-                          onClick={() => copySnippet(codeSnippets[activeCodeTab])}
-                          className="flex items-center gap-1.5 px-3 py-1 text-xs font-semibold rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors border border-slate-700"
-                        >
-                          {copiedCode ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
-                          <span>{copiedCode ? "Copied" : "Copy"}</span>
-                        </button>
-                      </div>
-                    </div>
-
-                    {/* Code Body */}
-                    <div className="p-5 font-mono text-xs sm:text-sm text-emerald-300/90 overflow-x-auto leading-relaxed max-h-[380px]">
-                      <pre>
-                        <code>{codeSnippets[activeCodeTab]}</code>
-                      </pre>
-                    </div>
-
-                    <div className="px-5 py-3 bg-[#07171e] border-t border-slate-800 text-[11px] text-slate-400 flex items-center justify-between">
-                      <span className="flex items-center gap-1.5">
-                        <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
-                        API Status: 100% Operational (Latency ~120ms)
-                      </span>
-                      <span className="font-mono text-emerald-400">HTTP 200 OK</span>
-                    </div>
-
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </section>
         </div>
       )}
 
@@ -1018,40 +890,68 @@ print("Response:", response.json())`
       </section>
 
       {/* ========================================================= */}
-      {/* CTA BANNER */}
+      {/* WHY PARTNER WITH US */}
       {/* ========================================================= */}
-      <section className="py-16 bg-[#04282B] text-white relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-8 text-center lg:text-left">
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="rounded-3xl bg-gradient-to-r from-emerald-900 via-[#04282B] to-[#03151E] text-white p-8 sm:p-14 relative overflow-hidden shadow-2xl">
             
-            <div className="space-y-3">
-              <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
-                Ready to Upgrade Your WhatsApp Strategy?
-              </h2>
-              <p className="text-emerald-200/90 text-base max-w-2xl">
-                Get started today with official Meta Cloud API, automated CRM workflows, and dedicated onboarding support.
-              </p>
-            </div>
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
+              <div className="lg:col-span-8 space-y-4 text-center lg:text-left">
+                <span className="text-xs font-bold uppercase tracking-widest text-[#00D084] bg-emerald-500/15 border border-emerald-500/30 px-3.5 py-1.5 rounded-full">
+                  TRUSTED PARTNER
+                </span>
+                <h2 className="text-3xl sm:text-4xl font-black tracking-tight">
+                  Ready to Supercharge Your Customer Reach?
+                </h2>
+                <p className="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl">
+                  Gentro Technologies ke sath 2 minute me WhatsApp Cloud API activate karein aur direct ROI generate karna shuru karein.
+                </p>
 
-            <div className="flex flex-wrap items-center justify-center gap-4 shrink-0">
-              <a
-                href="https://calendar.app.google/HE3fCD4eECoADNaG8"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-[#00D084] hover:bg-emerald-400 text-slate-950 font-bold text-base px-8 py-4 rounded-full transition-all shadow-xl hover:scale-105 group"
-              >
-                <Calendar className="w-5 h-5" />
-                <span>Book Demo Now</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </a>
+                <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4">
+                  <a
+                    href="https://calendar.app.google/HE3fCD4eECoADNaG8"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-[#00D084] hover:bg-emerald-400 text-slate-950 font-bold text-base px-8 py-4 rounded-full transition-all shadow-xl hover:scale-105 group"
+                  >
+                    <Calendar className="w-5 h-5" />
+                    <span>Book Demo Now</span>
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </a>
 
-              <a
-                href="tel:+918084037252"
-                className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold text-base px-6 py-4 rounded-full border border-white/20 transition-all"
-              >
-                <PhoneCall className="w-4 h-4 text-[#00D084]" />
-                <span>Talk to Expert</span>
-              </a>
+                  <a
+                    href="tel:+918084037252"
+                    className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold text-base px-6 py-4 rounded-full border border-white/20 transition-all"
+                  >
+                    <PhoneCall className="w-4 h-4 text-[#00D084]" />
+                    <span>Talk to Our Team</span>
+                  </a>
+                </div>
+              </div>
+
+              <div className="lg:col-span-4 flex justify-center lg:justify-end">
+                <div className="w-full max-w-[280px] p-6 rounded-2xl bg-white/5 border border-white/10 text-center backdrop-blur-md">
+                  <span className="text-4xl block mb-2">⚡</span>
+                  <p className="text-2xl font-black text-[#00D084]">₹0.15</p>
+                  <p className="text-xs text-slate-300 mt-1">Starting Price Per Message (15 Paisa)</p>
+                  <div className="mt-3 p-2.5 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-center">
+                    <span className="text-[11px] text-emerald-300 font-medium block">WhatsApp API & CRM Software</span>
+                    <span className="text-sm font-black text-white">₹7,999 / yearly</span>
+                  </div>
+                  <div className="mt-4 pt-4 border-t border-white/10 text-left space-y-2 text-xs text-slate-300">
+                    <p className="flex items-center gap-2">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#00D084]" /> 100% Meta Verified API
+                    </p>
+                    <p className="flex items-center gap-2">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#00D084]" /> Unlimited Contacts
+                    </p>
+                    <p className="flex items-center gap-2">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#00D084]" /> Multi-Agent CRM Access
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
 
           </div>
