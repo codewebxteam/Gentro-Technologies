@@ -881,7 +881,7 @@ print("Response:", response.json())`
                   TRANSPARENT PRICING CALCULATOR
                 </span>
                 <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight mt-3">
-                  Calculate Your Monthly Messaging Cost
+                  Calculate Your Messaging Cost
                 </h2>
                 <p className="text-slate-300 text-sm sm:text-base mt-2">
                   See your messaging costs at our flat rate of ₹0.15 (15 paise) per message.
@@ -893,7 +893,7 @@ print("Response:", response.json())`
                 <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
                   <div>
                     <label htmlFor="msg-range" className="text-sm text-slate-300 font-medium">
-                      Estimated Monthly Messages:
+                      Estimated Messages:
                     </label>
                     <p className="text-3xl sm:text-4xl font-black text-[#00D084] mt-1">
                       {calcMessages.toLocaleString("en-IN")} <span className="text-sm font-normal text-slate-300">messages</span>
@@ -911,16 +911,16 @@ print("Response:", response.json())`
                 <input
                   id="msg-range"
                   type="range"
-                  min="5000"
+                  min="500"
                   max="500000"
-                  step="5000"
+                  step="500"
                   value={calcMessages}
                   onChange={(e) => setCalcMessages(Number(e.target.value))}
                   className="w-full h-3 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-[#00D084]"
                 />
 
                 <div className="flex justify-between text-xs text-slate-400 font-mono">
-                  <span>5,000 msgs</span>
+                  <span>500 msgs</span>
                   <span>1,00,000 msgs</span>
                   <span>5,00,000 msgs</span>
                 </div>
@@ -931,13 +931,16 @@ print("Response:", response.json())`
                     <span>Includes WhatsApp Cloud API Access + Webhooks + CRM</span>
                   </div>
 
-                  <Link
-                    href="/#contact"
+                  <a
+                    href="https://calendar.app.google/HE3fCD4eECoADNaG8"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#00D084] hover:bg-emerald-400 text-slate-950 font-bold text-sm px-6 py-3 rounded-full transition-all shadow-md group"
                   >
-                    <span>Get Custom Quote</span>
+                    <Calendar className="w-4 h-4" />
+                    <span>Book Free Demo</span>
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </Link>
+                  </a>
                 </div>
 
               </div>

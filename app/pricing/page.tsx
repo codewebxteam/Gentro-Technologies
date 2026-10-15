@@ -683,16 +683,16 @@ export default function PricingPage() {
                 <input
                   id="msg-range-pricing"
                   type="range"
-                  min="5000"
+                  min="500"
                   max="500000"
-                  step="5000"
+                  step="500"
                   value={calcMessages}
                   onChange={(e) => setCalcMessages(Number(e.target.value))}
                   className="w-full h-3 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-[#00D084]"
                 />
 
                 <div className="flex justify-between text-xs text-slate-400 font-mono">
-                  <span>5,000 msgs</span>
+                  <span>500 msgs</span>
                   <span>1,00,000 msgs</span>
                   <span>5,00,000 msgs</span>
                 </div>
