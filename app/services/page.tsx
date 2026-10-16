@@ -33,94 +33,113 @@ import {
   Menu,
   X,
   Play,
-  Calendar
+  Calendar,
+  TrendingUp
 } from "lucide-react";
 
 export default function ServicesPage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeTab, setActiveTab] = useState<"api" | "crm">("api");
-  const [activeCodeTab, setActiveCodeTab] = useState<"curl" | "node" | "python">("node");
-  const [copiedCode, setCopiedCode] = useState(false);
   const [activeFaq, setActiveFaq] = useState<number | null>(0);
-  const [calcMessages, setCalcMessages] = useState<number>(50000);
+  const [calcMessages, setCalcMessages] = useState<number>(500);
 
-  const copySnippet = (codeText: string) => {
-    navigator.clipboard.writeText(codeText);
-    setCopiedCode(true);
-    setTimeout(() => setCopiedCode(false), 2000);
-  };
-
-  const codeSnippets = {
-    node: `// Gentro Technologies - WhatsApp API Node.js SDK
-import axios from "axios";
-
-async function sendWhatsAppMessage() {
-  const response = await axios.post(
-    "https://api.gentrotechnologies.com/v1/messages/send",
+  const platformSteps = [
     {
-      to: "+919876543210",
-      type: "template",
-      template: {
-        name: "order_confirmation_v2",
-        language: { code: "en" },
-        components: [
-          {
-            type: "body",
-            parameters: [
-              { type: "text", text: "Rahul" },
-              { type: "text", text: "#ORD-99824" }
-            ]
-          }
-        ]
-      }
+      step: "01",
+      id: "step-1",
+      title: "Unlock your Message limit upto 1 Lac",
+      badge: "Official Meta Tier Scaling",
+      tagline: "Scale from 1K to 1,00,000+ Daily Messages",
+      desc: "Seamlessly upgrade your WhatsApp Business API messaging tier from 1,000 to 10,000 and up to 1,00,000+ daily messages. Gentro Technologies provides end-to-end Meta Business verification support and compliance guidance so you can scale your customer reach with zero number bans.",
+      bullets: [
+        "Official Meta Tier 1 (1K) to Tier 3 (100K+) progression",
+        "Meta Business Manager verification and compliance assistance",
+        "Zero number-ban risk with verified cloud API routing",
+        "High message delivery throughput with sub-second latency"
+      ],
+      image: "https://ik.imagekit.io/0s0fb4b2b/Gentro/1stGentro.jpeg",
+      endpoint: "gentro.tech/dashboard/meta-tier-limits",
+      icon: TrendingUp,
+      badgeStyle: "bg-emerald-50 text-emerald-700 border-emerald-200",
+      stepNumStyle: "bg-emerald-600 text-white"
     },
     {
-      headers: {
-        Authorization: "Bearer YOUR_GENTRO_API_KEY",
-        "Content-Type": "application/json"
-      }
+      step: "02",
+      id: "step-2",
+      title: "Engage with customers",
+      badge: "Multi-Agent Shared Inbox",
+      tagline: "Unify Chats, Teams & Real-Time Responses",
+      desc: "Empower your sales, support, and operations teams to collaborate on a single official WhatsApp number. Route conversations to specific agents, add internal team notes, track lead stages, and send rich media or quick canned responses to close deals faster.",
+      bullets: [
+        "Unified multi-agent inbox for sales and customer support",
+        "Intelligent ticket routing & customer chat assignment",
+        "Rich media support: PDFs, images, catalogs & voice notes",
+        "Custom tags and contact segmentation for rapid follow-ups"
+      ],
+      image: "https://ik.imagekit.io/0s0fb4b2b/Gentro/2ndGentro.jpeg",
+      endpoint: "gentro.tech/dashboard/live-chat/inbox",
+      icon: MessageSquare,
+      badgeStyle: "bg-blue-50 text-blue-700 border-blue-200",
+      stepNumStyle: "bg-blue-600 text-white"
+    },
+    {
+      step: "03",
+      id: "step-3",
+      title: "Bulk Messaging",
+      badge: "High-ROI Broadcast Engine",
+      tagline: "Send Targeted Campaigns to Lakhs of Customers",
+      desc: "Broadcast personalized marketing promotions, discount vouchers, festival offers, and transactional alerts to your opt-in contact lists in seconds. Take advantage of interactive WhatsApp CTA buttons (Visit Website, Call Now) with flat ₹0.15 per message pricing and a 98% open rate.",
+      bullets: [
+        "Broadcast to unlimited contacts with 98% open rate",
+        "Personalized variables: customer names, order IDs, discount codes",
+        "Interactive CTA buttons: Visit Website, Click to Call, Quick Reply",
+        "Flat ₹0.15 (15 paise) per message with zero hidden costs"
+      ],
+      image: "https://ik.imagekit.io/0s0fb4b2b/Gentro/3rdGentro.jpeg",
+      endpoint: "gentro.tech/dashboard/campaigns/broadcast",
+      icon: Send,
+      badgeStyle: "bg-purple-50 text-purple-700 border-purple-200",
+      stepNumStyle: "bg-purple-600 text-white"
+    },
+    {
+      step: "04",
+      id: "step-4",
+      title: "Campaign Report",
+      badge: "Real-Time Analytical Dashboard",
+      tagline: "Track Every Delivery, Read & Click in Real Time",
+      desc: "Gain crystal-clear visibility into the ROI of every campaign with live analytical tracking. Monitor real-time sent, delivered, read, and replied counts, inspect failure error codes, monitor wallet balance deductions, and download comprehensive Excel or CSV reports in one click.",
+      bullets: [
+        "Real-time message status tracking (Sent, Delivered, Read, Failed)",
+        "Transparent wallet ledger & per-campaign cost breakdown",
+        "Granular error diagnostic codes for failed messages",
+        "1-Click exportable CSV & Excel reports for management audits"
+      ],
+      image: "https://ik.imagekit.io/0s0fb4b2b/Gentro/4thGentro.jpeg",
+      endpoint: "gentro.tech/dashboard/analytics/campaign-reports",
+      icon: BarChart3,
+      badgeStyle: "bg-amber-50 text-amber-700 border-amber-200",
+      stepNumStyle: "bg-amber-600 text-white"
+    },
+    {
+      step: "05",
+      id: "step-5",
+      title: "Chatbot automation",
+      badge: "24/7 No-Code Flow Builder",
+      tagline: "Automate Support, Lead Capture & FAQs On Autopilot",
+      desc: "Build intelligent conversational workflows with our intuitive no-code drag-and-drop chatbot builder. Capture qualified leads around the clock, answer common customer queries, trigger automated order status lookups, and automatically transfer complex conversations to live human agents.",
+      bullets: [
+        "Visual drag-and-drop flow builder with no coding required",
+        "24/7 instant replies for lead capture, pricing & FAQs",
+        "Dynamic menu buttons, quick replies & keyword triggers",
+        "Seamless live human agent handover when needed"
+      ],
+      image: "https://ik.imagekit.io/0s0fb4b2b/Gentro/5thGentro.jpeg",
+      endpoint: "gentro.tech/dashboard/automations/chatbot-builder",
+      icon: Bot,
+      badgeStyle: "bg-rose-50 text-rose-700 border-rose-200",
+      stepNumStyle: "bg-rose-600 text-white"
     }
-  );
-
-  console.log("Message Delivered:", response.data);
-}
-
-sendWhatsAppMessage();`,
-    curl: `curl -X POST "https://api.gentrotechnologies.com/v1/messages/send" \\
-  -H "Authorization: Bearer YOUR_GENTRO_API_KEY" \\
-  -H "Content-Type: application/json" \\
-  -d '{
-    "to": "+919876543210",
-    "type": "template",
-    "template": {
-      "name": "promo_mega_sale",
-      "language": { "code": "en" },
-      "components": [
-        { "type": "body", "parameters": [{ "type": "text", "text": "Flat 50% OFF" }] }
-      ]
-    }
-  }'`,
-    python: `# Gentro Technologies - WhatsApp API Python Example
-import requests
-
-url = "https://api.gentrotechnologies.com/v1/messages/send"
-headers = {
-    "Authorization": "Bearer YOUR_GENTRO_API_KEY",
-    "Content-Type": "application/json"
-}
-
-payload = {
-    "to": "+919876543210",
-    "type": "text",
-    "text": {
-        "body": "Namaste! Aapka order dispatch ho chuka hai. Track karein: gentro.tech/tr/8821"
-    }
-}
-
-response = requests.post(url, json=payload, headers=headers)
-print("Status Code:", response.status_code)
-print("Response:", response.json())`
-  };
+  ];
 
   const faqs = [
     {
@@ -726,7 +745,158 @@ print("Response:", response.json())`
         </div>
       )}
 
+      {/* ========================================================= */}
+      {/* 5-STEP PLATFORM WORKFLOW & VISUAL SHOWCASE */}
+      {/* ========================================================= */}
+      <section className="py-20 bg-slate-50 border-t border-b border-slate-200 relative overflow-hidden" id="platform-flow">
+        {/* Subtle background glow */}
+        <div className="absolute top-1/4 left-10 w-96 h-96 bg-emerald-100/40 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-1/4 right-10 w-96 h-96 bg-teal-100/30 rounded-full blur-3xl pointer-events-none" />
 
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          
+          {/* Section Header */}
+          <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 space-y-4">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold tracking-wider uppercase">
+              <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
+              <span>END-TO-END WORKFLOW</span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
+              How Gentro Powers Your WhatsApp Growth
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
+              A complete, step-by-step visual walkthrough of our enterprise WhatsApp API and CRM platform in action.
+            </p>
+
+            {/* Quick Step Indicator Pills */}
+            <div className="pt-4 flex flex-wrap items-center justify-center gap-2 sm:gap-3">
+              {platformSteps.map((s, idx) => (
+                <a
+                  key={s.step}
+                  href={`#${s.id}`}
+                  className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-white border border-slate-200 hover:border-emerald-500 hover:text-emerald-700 shadow-sm transition-all hover:-translate-y-0.5"
+                >
+                  <span className={`w-5 h-5 rounded-full ${s.stepNumStyle} text-[10px] font-bold flex items-center justify-center`}>
+                    {idx + 1}
+                  </span>
+                  <span>{s.title}</span>
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* 5 Alternating Steps */}
+          <div className="space-y-16 sm:space-y-24">
+            {platformSteps.map((step, idx) => {
+              const isEven = idx % 2 === 0;
+
+              return (
+                <div
+                  key={step.step}
+                  id={step.id}
+                  className="scroll-mt-28"
+                >
+                  <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                    
+                    {/* Text Column */}
+                    <div className={`lg:col-span-5 space-y-5 ${isEven ? "lg:order-1" : "lg:order-2"}`}>
+                      {/* Step Badge */}
+                      <div className="flex items-center gap-2.5">
+                        <span className={`w-9 h-9 rounded-xl ${step.stepNumStyle} font-black text-sm flex items-center justify-center shadow-md`}>
+                          {step.step}
+                        </span>
+                        <span className={`px-3 py-1 rounded-full text-xs font-bold border ${step.badgeStyle}`}>
+                          {step.badge}
+                        </span>
+                      </div>
+
+                      {/* Title */}
+                      <h3 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight leading-tight">
+                        {step.title}
+                      </h3>
+
+                      {/* Tagline */}
+                      <p className="text-sm font-bold text-emerald-700">
+                        {step.tagline}
+                      </p>
+
+                      {/* Description */}
+                      <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+                        {step.desc}
+                      </p>
+
+                      {/* Bullets */}
+                      <ul className="space-y-2.5 pt-1">
+                        {step.bullets.map((bullet, bIdx) => (
+                          <li key={bIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700">
+                            <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                            <span>{bullet}</span>
+                          </li>
+                        ))}
+                      </ul>
+
+                      {/* CTA */}
+                      <div className="pt-2">
+                        <a
+                          href="https://calendar.app.google/HE3fCD4eECoADNaG8"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm px-5 py-2.5 rounded-full transition-all shadow-md hover:shadow-lg group"
+                        >
+                          <Calendar className="w-4 h-4 text-emerald-100" />
+                          <span>Book Demo & See Live</span>
+                          <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                        </a>
+                      </div>
+                    </div>
+
+                    {/* Screenshot Mockup Column */}
+                    <div className={`lg:col-span-7 ${isEven ? "lg:order-2" : "lg:order-1"}`}>
+                      <div className="rounded-2xl border-2 border-slate-200/90 bg-slate-900 shadow-2xl overflow-hidden group hover:border-emerald-500/50 transition-all duration-300 hover:shadow-emerald-500/10 hover:-translate-y-1">
+                        {/* Browser Window Header */}
+                        <div className="bg-slate-900 px-4 py-3 flex items-center justify-between border-b border-slate-800">
+                          <div className="flex items-center gap-2">
+                            <div className="flex items-center gap-1.5">
+                              <span className="w-3 h-3 rounded-full bg-rose-500 inline-block"></span>
+                              <span className="w-3 h-3 rounded-full bg-amber-500 inline-block"></span>
+                              <span className="w-3 h-3 rounded-full bg-emerald-500 inline-block"></span>
+                            </div>
+                            <span className="text-xs text-slate-400 font-mono pl-2 truncate max-w-[180px] sm:max-w-xs">
+                              {step.endpoint}
+                            </span>
+                          </div>
+                          <span className="text-[11px] font-bold tracking-wider text-emerald-400 bg-emerald-950/70 border border-emerald-500/30 px-2.5 py-0.5 rounded-full">
+                            Step {step.step}
+                          </span>
+                        </div>
+
+                        {/* High-Res Dashboard Screenshot */}
+                        <div className="relative bg-slate-950 overflow-hidden">
+                          <img
+                            src={step.image}
+                            alt={`${step.title} - Gentro Technologies Platform Interface`}
+                            className="w-full h-auto object-cover transform transition-transform duration-500 group-hover:scale-[1.015]"
+                            loading="lazy"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  {/* Connecting divider between steps */}
+                  {idx < platformSteps.length - 1 && (
+                    <div className="hidden lg:flex justify-center my-12">
+                      <div className="h-8 w-px bg-gradient-to-b from-emerald-500/40 via-slate-300 to-transparent" />
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+
+        </div>
+      </section>
 
       {/* ========================================================= */}
       {/* COST CALCULATOR / VALUE SECTION */}

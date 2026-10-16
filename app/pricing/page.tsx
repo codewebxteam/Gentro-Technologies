@@ -28,7 +28,7 @@ import {
 export default function PricingPage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeFaq, setActiveFaq] = useState<number | null>(0);
-  const [calcMessages, setCalcMessages] = useState<number>(50000);
+  const [calcMessages, setCalcMessages] = useState<number>(500);
 
   // Competitor average cost is approx 0.45/msg (accounting for 15-20% markup + base costs)
   const gentroCost = Math.round(calcMessages * 0.15);
