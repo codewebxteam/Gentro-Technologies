@@ -245,13 +245,13 @@ export default function Home() {
       {/* HEADER / NAVBAR */}
       {/* ========================================================= */}
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.04)]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-          {/* Brand Logo - larger without duplicate text */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+          {/* Brand Logo */}
           <a href="#" className="flex items-center group">
             <img
               src="https://ik.imagekit.io/0s0fb4b2b/Gentro/Glossy%20Gentro%20Technologies%20Logo.png"
               alt="Gentro Technologies Logo"
-              className="h-12 sm:h-14 md:h-16 w-auto object-contain transition-transform group-hover:scale-105"
+              className="h-9 sm:h-12 md:h-16 w-auto object-contain transition-transform group-hover:scale-105"
             />
           </a>
 
@@ -298,33 +298,33 @@ export default function Home() {
 
         {/* Mobile Dropdown (Without Blog) */}
         {mobileMenuOpen && (
-          <div className="md:hidden bg-white border-b border-slate-200 px-6 py-5 shadow-xl animate-in slide-in-from-top-2 duration-200">
-            <div className="flex flex-col gap-4 text-base font-semibold text-slate-700">
+          <div className="md:hidden bg-white border-b border-slate-200 px-5 py-4 shadow-xl animate-in slide-in-from-top-2 duration-200">
+            <div className="flex flex-col gap-3 text-sm sm:text-base font-semibold text-slate-700">
               <a
                 href="#"
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-emerald-600 hover:text-emerald-700"
+                className="text-emerald-600 hover:text-emerald-700 py-1"
               >
                 Home
               </a>
               <a
                 href="/services"
                 onClick={() => setMobileMenuOpen(false)}
-                className="hover:text-emerald-600"
+                className="hover:text-emerald-600 py-1"
               >
                 Services
               </a>
               <a
                 href="/pricing"
                 onClick={() => setMobileMenuOpen(false)}
-                className="hover:text-emerald-600"
+                className="hover:text-emerald-600 py-1"
               >
                 Pricing
               </a>
               <a
                 href="/contact"
                 onClick={() => setMobileMenuOpen(false)}
-                className="hover:text-emerald-600"
+                className="hover:text-emerald-600 py-1"
               >
                 Contact
               </a>
@@ -333,7 +333,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileMenuOpen(false)}
-                className="mt-2 text-center bg-emerald-600 text-white py-3 rounded-full font-bold flex items-center justify-center gap-2 shadow-md"
+                className="mt-1 text-center bg-emerald-600 text-white py-2.5 rounded-full font-bold flex items-center justify-center gap-2 shadow-md text-sm"
               >
                 <Calendar className="w-4 h-4" />
                 <span>Book Demo</span>
@@ -348,37 +348,101 @@ export default function Home() {
       {/* HERO SECTION WITH FULL IMAGES (ZERO CROPPING) */}
       {/* ========================================================= */}
       <section className="relative overflow-hidden bg-white">
-        {/* Mobile / Phone Hero View - 100% Full Uncropped Image */}
-        <div className="block md:hidden relative w-full">
-          <img
-            src="https://ik.imagekit.io/0s0fb4b2b/Gentro/WhatsApp%20Marketing,%20More%20Growth.webp?updatedAt=1791813581401"
-            alt="WhatsApp Marketing Mobile"
-            className="w-full h-auto object-contain block"
-          />
-          {/* Mobile Text Overlay - Positioned Top 100px */}
-          <div className="absolute inset-x-0 top-[100px] px-4 text-center z-10 space-y-2.5">
-            {/* Handwritten Tagline Badge */}
-            <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-emerald-100/90 border border-emerald-200 text-emerald-800 text-xs sm:text-sm font-bold tracking-wide shadow-sm backdrop-blur-sm">
+        {/* Mobile / Phone Hero View - Compact, Clean & Space-Optimized */}
+        <div className="block md:hidden relative w-full pt-4 pb-6 px-4 bg-gradient-to-b from-emerald-50/50 via-white to-slate-50 border-b border-slate-100">
+          <div className="text-center space-y-2.5 mb-3.5">
+            {/* Tagline Badge */}
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100/90 border border-emerald-200 text-emerald-800 text-xs font-bold tracking-wide shadow-xs">
               <span className="text-emerald-600">✦</span>
-              <span className="italic font-serif text-sm">More Reach. Less Cost</span>
+              <span className="italic font-serif">More Reach. Less Cost</span>
               <span className="text-emerald-600">✦</span>
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-[28px] sm:text-[34px] font-black text-slate-900 tracking-tight leading-tight">
-              Har Message Ab <br />
-              Sirf{" "}
-              <span className="relative inline-block px-2.5 py-0.5 mx-0.5 text-slate-900 bg-[#FFB800] rounded-lg shadow-sm">
+            <h1 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight leading-tight">
+              Har Message Ab Sirf{" "}
+              <span className="relative inline-block px-2 py-0.5 mx-0.5 text-slate-900 bg-[#FFB800] rounded-lg shadow-xs">
                 15 Paisa
-                <span className="absolute -top-1.5 -right-1.5 text-amber-500 text-xs">✨</span>
+                <span className="absolute -top-1 -right-1 text-amber-500 text-[10px]">✨</span>
               </span>{" "}
               Mein! 😃
             </h1>
 
             {/* English Description */}
-            <p className="text-slate-700 text-sm sm:text-base font-medium max-w-sm sm:max-w-md mx-auto leading-relaxed bg-white/70 backdrop-blur-xs rounded-xl p-2 shadow-sm">
-              A smarter way to message — where every message isn't just an expense, but a new opportunity.
+            <p className="text-slate-600 text-xs sm:text-sm font-medium max-w-xs mx-auto leading-relaxed">
+              A smarter way to message — where every message isn&apos;t just an expense, but a new opportunity.
             </p>
+
+            {/* Mobile Action Buttons */}
+            <div className="flex flex-col gap-2 pt-1 max-w-xs mx-auto">
+              <a
+                href="https://calendar.app.google/HE3fCD4eECoADNaG8"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full inline-flex items-center justify-center gap-2 bg-[#091E28] hover:bg-slate-900 text-white font-bold text-sm py-3 rounded-full shadow-md group"
+              >
+                <Calendar className="w-4 h-4 text-emerald-400" />
+                <span>Book Free Demo</span>
+                <ArrowRight className="w-3.5 h-3.5 text-emerald-400 group-hover:translate-x-1 transition-transform" />
+              </a>
+
+              <button
+                onClick={() => setIsVideoModalOpen(true)}
+                className="w-full inline-flex items-center justify-center gap-2 text-slate-800 font-semibold text-xs py-2.5 rounded-full border border-slate-300 bg-white hover:bg-slate-50 shadow-2xs"
+              >
+                <Play className="w-3 h-3 fill-slate-900" />
+                <span>Watch How It Works (1 min)</span>
+              </button>
+            </div>
+          </div>
+
+          {/* Mobile Image - Full Uncropped */}
+          <div className="rounded-xl overflow-hidden shadow-sm border border-slate-200/80 max-w-md mx-auto">
+            <img
+              src="https://ik.imagekit.io/0s0fb4b2b/Gentro/WhatsApp%20Marketing,%20More%20Growth.webp?updatedAt=1791813581401"
+              alt="WhatsApp Marketing Mobile"
+              className="w-full h-auto object-contain block"
+            />
+          </div>
+
+          {/* 4 Feature Badges in 2x2 grid on mobile */}
+          <div className="grid grid-cols-2 gap-2 pt-3 max-w-md mx-auto">
+            <div className="flex items-center gap-2 p-2 rounded-xl bg-white border border-slate-200/80 shadow-2xs">
+              <div className="w-7 h-7 rounded-lg bg-emerald-100 flex items-center justify-center text-emerald-700 shrink-0 font-bold text-xs">
+                ₹
+              </div>
+              <div className="text-left">
+                <p className="text-xs font-bold text-slate-900 leading-tight">Better</p>
+                <p className="text-[10px] text-slate-500">Reach</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-2 p-2 rounded-xl bg-white border border-slate-200/80 shadow-2xs">
+              <div className="w-7 h-7 rounded-lg bg-emerald-100 flex items-center justify-center text-emerald-700 shrink-0">
+                <TrendingUp className="w-3.5 h-3.5" />
+              </div>
+              <div className="text-left">
+                <p className="text-xs font-bold text-slate-900 leading-tight">Higher</p>
+                <p className="text-[10px] text-slate-500">Engagement</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-2 p-2 rounded-xl bg-white border border-slate-200/80 shadow-2xs">
+              <div className="w-7 h-7 rounded-lg bg-emerald-100 flex items-center justify-center text-emerald-700 shrink-0">
+                <ShieldCheck className="w-3.5 h-3.5" />
+              </div>
+              <div className="text-left">
+                <p className="text-xs font-bold text-slate-900 leading-tight">Secure</p>
+                <p className="text-[10px] text-slate-500">& Reliable</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-2 p-2 rounded-xl bg-white border border-slate-200/80 shadow-2xs">
+              <div className="w-7 h-7 rounded-lg bg-emerald-100 flex items-center justify-center text-emerald-700 shrink-0">
+                <Zap className="w-3.5 h-3.5" />
+              </div>
+              <div className="text-left">
+                <p className="text-xs font-bold text-slate-900 leading-tight">High</p>
+                <p className="text-[10px] text-slate-500">Delivery Rate</p>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -499,27 +563,27 @@ export default function Home() {
       {/* ========================================================= */}
       {/* OUR SERVICES SECTION */}
       {/* ========================================================= */}
-      <section id="services" className="py-10 sm:py-16 md:py-20 bg-white relative">
+      <section id="services" className="py-8 sm:py-14 md:py-20 bg-white relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Header & View All */}
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 md:mb-12 gap-6">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 sm:mb-10 gap-4 sm:gap-6">
             <div>
               <span className="text-xs font-bold uppercase tracking-widest text-emerald-600 bg-emerald-50 border border-emerald-200/60 px-3 py-1 rounded-full">
                 OUR SERVICES
               </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-3">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mt-2.5">
                 Powerful WhatsApp Solutions <br className="hidden sm:inline" />
                 for Every Business
               </h2>
-              <p className="text-slate-600 text-base sm:text-lg mt-3 max-w-2xl">
+              <p className="text-slate-600 text-sm sm:text-base md:text-lg mt-2 max-w-2xl">
                 From promotions to customer support — we help businesses connect, engage and grow with WhatsApp.
               </p>
             </div>
 
             <a
               href="/services"
-              className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm px-6 py-3 rounded-full transition-all shadow-sm hover:shadow-md self-start md:self-auto group"
+              className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs sm:text-sm px-5 py-2.5 sm:px-6 sm:py-3 rounded-full transition-all shadow-xs hover:shadow-sm self-start md:self-auto group"
             >
               <span>View All Services</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -527,38 +591,38 @@ export default function Home() {
           </div>
 
           {/* 5 Service Cards Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-5">
             {services.map((srv, idx) => {
               const IconComp = srv.icon;
               return (
                 <div
                   key={idx}
-                  className={`${srv.bg} ${srv.border} border rounded-2xl p-6 flex flex-col justify-between hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group`}
+                  className={`${srv.bg} ${srv.border} border rounded-2xl p-4 sm:p-6 flex flex-col justify-between hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group`}
                 >
                   <div>
                     {/* Icon Badge */}
-                    <div className={`w-12 h-12 rounded-xl ${srv.accent} text-white flex items-center justify-center shadow-md mb-6 group-hover:scale-110 transition-transform`}>
-                      <IconComp className="w-6 h-6" />
+                    <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl ${srv.accent} text-white flex items-center justify-center shadow-xs mb-4 sm:mb-6 group-hover:scale-105 transition-transform`}>
+                      <IconComp className="w-5 h-5 sm:w-6 sm:h-6" />
                     </div>
 
-                    <h3 className="text-lg font-bold text-slate-900 leading-snug mb-2">
+                    <h3 className="text-base sm:text-lg font-bold text-slate-900 leading-snug mb-1.5 sm:mb-2">
                       {srv.title}
                     </h3>
                     
-                    <p className="text-sm text-slate-600 leading-relaxed mb-6">
+                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4 sm:mb-6">
                       {srv.description}
                     </p>
                   </div>
 
-                  <div className="flex items-center justify-between pt-2">
-                    <span className={`text-[11px] font-bold px-2 py-0.5 rounded-full ${srv.textAccent} bg-white/80`}>
+                  <div className="flex items-center justify-between pt-2 border-t border-slate-100/60">
+                    <span className={`text-[10px] sm:text-[11px] font-bold px-2 py-0.5 rounded-full ${srv.textAccent} bg-white/80`}>
                       {srv.tag}
                     </span>
                     <button
                       aria-label={srv.title}
-                      className={`w-8 h-8 rounded-full ${srv.accent} text-white flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform`}
+                      className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full ${srv.accent} text-white flex items-center justify-center shadow-xs group-hover:scale-105 transition-transform`}
                     >
-                      <ArrowRight className="w-4 h-4" />
+                      <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                     </button>
                   </div>
                 </div>
@@ -572,7 +636,7 @@ export default function Home() {
       {/* ========================================================= */}
       {/* WHY BUSINESSES CHOOSE US SECTION */}
       {/* ========================================================= */}
-      <section id="why-us" className="py-10 sm:py-16 md:py-20 bg-slate-50/60 relative overflow-hidden border-y border-slate-100">
+      <section id="why-us" className="py-8 sm:py-14 md:py-20 bg-slate-50/60 relative overflow-hidden border-y border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
@@ -645,44 +709,44 @@ export default function Home() {
       {/* ========================================================= */}
       {/* HOW IT WORKS SECTION */}
       {/* ========================================================= */}
-      <section className="py-10 sm:py-16 md:py-20 bg-white relative">
+      <section className="py-8 sm:py-14 md:py-20 bg-white relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div className="text-center max-w-3xl mx-auto mb-8 md:mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-10 md:mb-14">
             <span className="text-xs font-bold uppercase tracking-widest text-emerald-600 bg-emerald-50 border border-emerald-200/60 px-3 py-1 rounded-full">
               HOW IT WORKS
             </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-3">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mt-2.5">
               Get Started in 3 Simple Steps
             </h2>
-            <p className="text-slate-600 text-base sm:text-lg mt-2">
+            <p className="text-slate-600 text-sm sm:text-base md:text-lg mt-1.5">
               Start sending messages in minutes — no technical hassle.
             </p>
           </div>
 
           {/* 3 Step Cards Grid - Clean & Balanced */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 max-w-5xl mx-auto">
             {steps.map((step, idx) => {
               const Icon = step.icon;
               return (
                 <div
                   key={idx}
-                  className="bg-white border border-slate-200/90 rounded-2xl p-7 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 relative flex flex-col items-start group"
+                  className="bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-7 shadow-xs hover:shadow-md hover:-translate-y-1 transition-all duration-300 relative flex flex-col items-start group"
                 >
                   {/* Step Number & Icon */}
-                  <div className="flex items-center gap-3 mb-5">
-                    <div className={`w-9 h-9 rounded-full ${step.color} text-white font-bold text-sm flex items-center justify-center shadow-md`}>
+                  <div className="flex items-center gap-3 mb-4 sm:mb-5">
+                    <div className={`w-8 h-8 sm:w-9 sm:h-9 rounded-full ${step.color} text-white font-bold text-xs sm:text-sm flex items-center justify-center shadow-xs`}>
                       {step.num}
                     </div>
-                    <div className="w-9 h-9 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center group-hover:bg-emerald-50 group-hover:text-emerald-600 transition-colors">
+                    <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center group-hover:bg-emerald-50 group-hover:text-emerald-600 transition-colors">
                       <Icon className="w-4 h-4" />
                     </div>
                   </div>
 
-                  <h3 className="text-xl font-bold text-slate-900 mb-2">
+                  <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-1.5 sm:mb-2">
                     {step.title}
                   </h3>
-                  <p className="text-sm text-slate-600 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                     {step.desc}
                   </p>
                 </div>
@@ -696,36 +760,36 @@ export default function Home() {
       {/* ========================================================= */}
       {/* CAMPAIGN BANNER / CTA WITH BADGE */}
       {/* ========================================================= */}
-      <section className="py-6 sm:py-10 bg-white">
+      <section className="py-4 sm:py-8 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="relative rounded-3xl bg-gradient-to-r from-emerald-50 via-teal-50 to-emerald-100/70 border border-emerald-200/80 p-6 sm:p-10 overflow-hidden shadow-lg">
+          <div className="relative rounded-2xl sm:rounded-3xl bg-gradient-to-r from-emerald-50 via-teal-50 to-emerald-100/70 border border-emerald-200/80 p-5 sm:p-8 lg:p-10 overflow-hidden shadow-md">
             
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center relative z-10">
               
               {/* Left Content */}
-              <div className="lg:col-span-7 space-y-3 text-center lg:text-left">
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
+              <div className="lg:col-span-7 space-y-2.5 sm:space-y-3 text-center lg:text-left">
+                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
                   Start Your WhatsApp Campaign Today!
                 </h2>
-                <p className="text-slate-700 text-sm sm:text-base max-w-xl mx-auto lg:mx-0">
+                <p className="text-slate-700 text-xs sm:text-sm md:text-base max-w-xl mx-auto lg:mx-0">
                   Revolutionize your customer communication with the lowest cost messaging.
                 </p>
 
-                <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-3">
+                <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-4 pt-2 sm:pt-3">
                   <a
                     href="https://calendar.app.google/HE3fCD4eECoADNaG8"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm sm:text-base px-7 py-3.5 rounded-full transition-all shadow-md hover:shadow-lg group"
+                    className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm md:text-base px-6 py-3 sm:px-7 sm:py-3.5 rounded-full transition-all shadow-xs hover:shadow-md group"
                   >
-                    <Calendar className="w-5 h-5" />
+                    <Calendar className="w-4 h-4 sm:w-5 sm:h-5" />
                     <span>Book Demo Now</span>
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" />
                   </a>
 
                   <a
                     href="tel:+918084037252"
-                    className="inline-flex items-center gap-2 bg-white hover:bg-slate-50 text-slate-800 font-semibold text-sm sm:text-base px-6 py-3.5 rounded-full border border-slate-300 shadow-sm transition-all"
+                    className="inline-flex items-center gap-2 bg-white hover:bg-slate-50 text-slate-800 font-semibold text-xs sm:text-sm md:text-base px-5 py-3 sm:px-6 sm:py-3.5 rounded-full border border-slate-300 shadow-2xs transition-all"
                   >
                     <PhoneCall className="w-4 h-4 text-emerald-600" />
                     <span>Talk to Our Expert</span>
@@ -733,9 +797,9 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Right Image Badge - Larger size matching text height */}
+              {/* Right Image Badge */}
               <div className="lg:col-span-5 flex justify-center lg:justify-end">
-                <div className="relative w-full max-w-[360px] sm:max-w-[420px] drop-shadow-xl hover:scale-105 transition-transform duration-300">
+                <div className="relative w-full max-w-[280px] sm:max-w-[360px] md:max-w-[420px] drop-shadow-md hover:scale-105 transition-transform duration-300">
                   <img
                     src="https://ik.imagekit.io/0s0fb4b2b/Gentro/WhatsApp%20Per-Message%20Cost%20Badge.webp?updatedAt=1791813581811"
                     alt="Just ₹0.15 Per Message Cost Badge"
@@ -752,70 +816,70 @@ export default function Home() {
       {/* ========================================================= */}
       {/* TRANSPARENT PRICING PLANS */}
       {/* ========================================================= */}
-      <section id="pricing" className="py-10 sm:py-16 md:py-20 bg-slate-50 border-t border-slate-200">
+      <section id="pricing" className="py-8 sm:py-14 md:py-20 bg-slate-50 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-8 md:mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-10 md:mb-14">
             <span className="text-xs font-bold uppercase tracking-widest text-emerald-600 bg-emerald-100/80 border border-emerald-200 px-3.5 py-1.5 rounded-full">
               TRANSPARENT PRICING
             </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-3">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mt-2.5">
               Powerful WhatsApp API. Lower Messaging Costs.
             </h2>
-            <p className="text-slate-600 text-base sm:text-lg mt-2">
+            <p className="text-slate-600 text-xs sm:text-sm md:text-base mt-1.5">
               Get the complete WhatsApp Business API software with messaging rates starting at just ₹0.15 per message.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 max-w-5xl mx-auto">
             
             {/* Plan 1: WhatsApp API & CRM Software */}
-            <div className="bg-white rounded-3xl p-8 sm:p-10 border-2 border-emerald-500 shadow-xl relative flex flex-col justify-between">
-              <div className="absolute -top-4 left-8 bg-emerald-600 text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-md">
+            <div className="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-8 lg:p-10 border-2 border-emerald-500 shadow-lg relative flex flex-col justify-between">
+              <div className="absolute -top-3.5 left-6 sm:left-8 bg-emerald-600 text-white text-[10px] sm:text-xs font-bold px-3 sm:px-4 py-1 rounded-full shadow-xs">
                 COMPLETE PLATFORM SUITE
               </div>
 
               <div>
-                <div className="flex items-center justify-between gap-4 mb-4">
-                  <h3 className="text-2xl font-bold text-slate-900">
+                <div className="flex items-center justify-between gap-4 mb-3 sm:mb-4">
+                  <h3 className="text-xl sm:text-2xl font-bold text-slate-900">
                     WhatsApp API & CRM Software
                   </h3>
-                  <div className="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
-                    <Bot className="w-6 h-6" />
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
+                    <Bot className="w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
                 </div>
                 
-                <p className="text-slate-600 text-sm mb-6">
+                <p className="text-slate-600 text-xs sm:text-sm mb-4 sm:mb-6">
                   Team live chat, chatbots, automation, contact management aur official Meta Cloud API management ke liye all-in-one software.
                 </p>
 
-                <div className="flex items-baseline gap-2 mb-6 pb-6 border-b border-slate-100">
-                  <span className="text-4xl sm:text-5xl font-black text-slate-900">₹7,999</span>
-                  <span className="text-slate-500 font-semibold">/ yearly</span>
+                <div className="flex items-baseline gap-2 mb-4 sm:mb-6 pb-4 sm:pb-6 border-b border-slate-100">
+                  <span className="text-3xl sm:text-5xl font-black text-slate-900">₹7,999</span>
+                  <span className="text-slate-500 text-xs sm:text-sm font-semibold">/ yearly</span>
                 </div>
 
-                <ul className="space-y-3.5 text-sm text-slate-700 mb-8">
-                  <li className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
+                <ul className="space-y-2.5 sm:space-y-3.5 text-xs sm:text-sm text-slate-700 mb-6 sm:mb-8">
+                  <li className="flex items-center gap-2.5 sm:gap-3">
+                    <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600 shrink-0" />
                     <span><strong>No-Code Chatbot & Flow Automation Builder</strong></span>
                   </li>
-                  <li className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
+                  <li className="flex items-center gap-2.5 sm:gap-3">
+                    <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600 shrink-0" />
                     <span><strong>Official Meta WhatsApp Cloud API</strong> Direct Access</span>
                   </li>
-                  <li className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
+                  <li className="flex items-center gap-2.5 sm:gap-3">
+                    <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600 shrink-0" />
                     <span><strong>Contacts & Group Segmentation</strong> (Unlimited Contacts)</span>
                   </li>
-                  <li className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
+                  <li className="flex items-center gap-2.5 sm:gap-3">
+                    <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600 shrink-0" />
                     <span><strong>Shopify, CRM & Webhook Integrations</strong></span>
                   </li>
-                  <li className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
+                  <li className="flex items-center gap-2.5 sm:gap-3">
+                    <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600 shrink-0" />
                     <span><strong>Real-time Analytics & Exportable Delivery Reports</strong></span>
                   </li>
-                  <li className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
+                  <li className="flex items-center gap-2.5 sm:gap-3">
+                    <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600 shrink-0" />
                     <span><strong>Dedicated Technical & Onboarding Support</strong></span>
                   </li>
                 </ul>
@@ -825,62 +889,62 @@ export default function Home() {
                 href="https://calendar.app.google/HE3fCD4eECoADNaG8"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-base py-4 rounded-xl transition-all shadow-md hover:shadow-lg group"
+                className="w-full inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm sm:text-base py-3.5 sm:py-4 rounded-xl transition-all shadow-xs hover:shadow-md group"
               >
-                <Calendar className="w-5 h-5" />
+                <Calendar className="w-4 h-4 sm:w-5 sm:h-5" />
                 <span>Book Demo & Get License</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
 
             {/* Plan 2: Pay As You Go Messaging */}
-            <div className="bg-white rounded-3xl p-8 sm:p-10 border border-slate-200 shadow-lg relative flex flex-col justify-between">
+            <div className="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-8 lg:p-10 border border-slate-200 shadow-md relative flex flex-col justify-between">
               <div>
-                <div className="flex items-center justify-between gap-4 mb-4">
-                  <h3 className="text-2xl font-bold text-slate-900">
+                <div className="flex items-center justify-between gap-4 mb-3 sm:mb-4">
+                  <h3 className="text-xl sm:text-2xl font-bold text-slate-900">
                     Pay-As-You-Go Messaging
                   </h3>
-                  <div className="w-12 h-12 rounded-2xl bg-slate-100 text-slate-800 flex items-center justify-center shrink-0">
-                    <Send className="w-6 h-6" />
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-slate-100 text-slate-800 flex items-center justify-center shrink-0">
+                    <Send className="w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
                 </div>
 
-                <p className="text-slate-600 text-sm mb-6">
+                <p className="text-slate-600 text-xs sm:text-sm mb-4 sm:mb-6">
                   Transparent per-message pricing marketing broadcasts, transactional OTPs, aur customer alerts ke liye.
                 </p>
 
-                <div className="flex items-baseline gap-2 mb-6 pb-6 border-b border-slate-100">
-                  <span className="text-4xl sm:text-5xl font-black text-slate-900">₹0.15</span>
-                  <span className="text-slate-500 font-semibold">(15 paise) / message</span>
+                <div className="flex items-baseline gap-2 mb-4 sm:mb-6 pb-4 sm:pb-6 border-b border-slate-100">
+                  <span className="text-3xl sm:text-5xl font-black text-slate-900">₹0.15</span>
+                  <span className="text-slate-500 text-xs sm:text-sm font-semibold">(15 paise) / message</span>
                 </div>
 
-                <ul className="space-y-3.5 text-sm text-slate-700 mb-8">
-                  <li className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
+                <ul className="space-y-2.5 sm:space-y-3.5 text-xs sm:text-sm text-slate-700 mb-6 sm:mb-8">
+                  <li className="flex items-center gap-2.5 sm:gap-3">
+                    <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600 shrink-0" />
                     <span><strong>High Speed & 99% Delivery Success Rate</strong></span>
                   </li>
-                  <li className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
+                  <li className="flex items-center gap-2.5 sm:gap-3">
+                    <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600 shrink-0" />
                     <span><strong>Instant OTP & Transactional Delivery</strong> (&lt; 3s)</span>
                   </li>
-                  <li className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
+                  <li className="flex items-center gap-2.5 sm:gap-3">
+                    <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600 shrink-0" />
                     <span><strong>Rich Media Support</strong> (Images, Videos, PDFs, CTAs)</span>
                   </li>
-                  <li className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
+                  <li className="flex items-center gap-2.5 sm:gap-3">
+                    <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600 shrink-0" />
                     <span><strong>Zero Expiry on Wallet Balance</strong></span>
                   </li>
-                  <li className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
+                  <li className="flex items-center gap-2.5 sm:gap-3">
+                    <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600 shrink-0" />
                     <span><strong>Meta Template Approval Assistance</strong></span>
                   </li>
-                  <li className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
+                  <li className="flex items-center gap-2.5 sm:gap-3">
+                    <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600 shrink-0" />
                     <span><strong>Live Read & Delivery Status Tracking</strong></span>
                   </li>
-                  <li className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
+                  <li className="flex items-center gap-2.5 sm:gap-3">
+                    <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600 shrink-0" />
                     <span><strong>No Minimum Wallet Commitment or Lock-in</strong></span>
                   </li>
                 </ul>
@@ -888,7 +952,7 @@ export default function Home() {
 
               <a
                 href="#contact"
-                className="w-full inline-flex items-center justify-center gap-2 bg-[#091E28] hover:bg-slate-900 text-white font-bold text-base py-4 rounded-xl transition-all shadow-md group"
+                className="w-full inline-flex items-center justify-center gap-2 bg-[#091E28] hover:bg-slate-900 text-white font-bold text-sm sm:text-base py-3.5 sm:py-4 rounded-xl transition-all shadow-xs group"
               >
                 <span>Recharge / Talk to Sales</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -902,17 +966,17 @@ export default function Home() {
       {/* ========================================================= */}
       {/* PRICE COMPARISON SECTION */}
       {/* ========================================================= */}
-      <section className="py-10 sm:py-16 md:py-20 bg-[#E8F8EE]/70 relative border-t border-emerald-100">
+      <section className="py-8 sm:py-14 md:py-20 bg-[#E8F8EE]/70 relative border-t border-emerald-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div className="text-center max-w-2xl mx-auto mb-8 md:mb-14">
+          <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-10 md:mb-14">
             <span className="text-xs font-bold uppercase tracking-widest text-emerald-800 bg-emerald-100/90 border border-emerald-200 px-3.5 py-1.5 rounded-full">
               PRICE COMPARISON
             </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-3">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mt-2.5">
               Stop Overpaying for WhatsApp Marketing
             </h2>
-            <p className="text-slate-600 text-base sm:text-lg mt-2">
+            <p className="text-slate-600 text-xs sm:text-sm md:text-base mt-1.5">
               See how Gentro Technologies compares to other WhatsApp API platforms.
             </p>
           </div>
@@ -920,18 +984,18 @@ export default function Home() {
           {/* Card Comparison Container */}
           <div className="max-w-xl mx-auto">
             {/* Top Card: Gentro Technologies (Highlighted with red/coral border) */}
-            <div className="relative rounded-3xl bg-white border-2 border-[#FF4E4E] p-7 sm:p-9 text-center shadow-xl">
+            <div className="relative rounded-2xl sm:rounded-3xl bg-white border-2 border-[#FF4E4E] p-5 sm:p-8 text-center shadow-lg">
               {/* Top Pill Badge */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-slate-100 border border-slate-200 text-xs sm:text-sm font-bold text-slate-800 shadow-xs mb-3">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-xs sm:text-sm font-bold text-slate-800 shadow-2xs mb-2 sm:mb-3">
                 <img
                   src="https://ik.imagekit.io/0s0fb4b2b/Gentro/Glossy%20Gentro%20Technologies%20Logo.png"
                   alt="Gentro Technologies"
-                  className="h-4 w-auto object-contain"
+                  className="h-3.5 sm:h-4 w-auto object-contain"
                 />
                 <span className="font-extrabold text-slate-900">Gentro</span>
                 <span className="text-slate-400">×</span>
                 <div className="flex items-center gap-1 text-[#0081FB]">
-                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                  <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M16.96 5.86c-1.74 0-3.32.8-4.96 2.45-1.64-1.65-3.22-2.45-4.96-2.45-3.3 0-6.04 2.87-6.04 6.74 0 4.13 2.74 7.02 6.04 7.02 1.83 0 3.39-.85 4.96-2.5 1.57 1.65 3.13 2.5 4.96 2.5 3.3 0 6.04-2.89 6.04-7.02 0-3.87-2.74-6.74-6.04-6.74zm-9.92 11.23c-2.07 0-3.88-1.93-3.88-4.49 0-2.47 1.81-4.22 3.88-4.22 1.34 0 2.53.69 3.84 2.15-1.42 2.76-2.6 6.56-3.84 6.56zm9.92 0c-1.24 0-2.42-3.8-3.84-6.56 1.31-1.46 2.5-2.15 3.84-2.15 2.07 0 3.88 1.75 3.88 4.22 0 2.56-1.81 4.49-3.88 4.49z"/>
                   </svg>
                   <span className="font-bold">Meta</span>
@@ -943,20 +1007,20 @@ export default function Home() {
               </p>
 
               {/* Big Bold Price */}
-              <div className="my-2.5">
-                <span className="text-5xl sm:text-6xl font-black text-slate-900 tracking-tight">₹7,999</span>
-                <span className="text-lg sm:text-2xl font-bold text-slate-700">/Year</span>
+              <div className="my-2 sm:my-2.5">
+                <span className="text-4xl sm:text-6xl font-black text-slate-900 tracking-tight">₹7,999</span>
+                <span className="text-base sm:text-2xl font-bold text-slate-700">/Year</span>
               </div>
 
-              <p className="text-sm sm:text-base font-extrabold text-emerald-600">
+              <p className="text-xs sm:text-sm md:text-base font-extrabold text-emerald-600">
                 + 0% Markup Fee <span className="text-slate-400 font-normal">•</span> Just ₹0.15 / Message
               </p>
 
               {/* Red Action Button Overlapping Bottom */}
-              <div className="absolute left-1/2 -translate-x-1/2 -bottom-6 w-full flex justify-center px-4">
+              <div className="absolute left-1/2 -translate-x-1/2 -bottom-5 sm:-bottom-6 w-full flex justify-center px-4">
                 <a
                   href="#contact"
-                  className="inline-flex items-center gap-2 bg-[#FF3838] hover:bg-[#E02828] text-white font-extrabold text-sm sm:text-base px-8 sm:px-10 py-3 sm:py-3.5 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all"
+                  className="inline-flex items-center gap-2 bg-[#FF3838] hover:bg-[#E02828] text-white font-extrabold text-xs sm:text-sm md:text-base px-6 sm:px-10 py-2.5 sm:py-3.5 rounded-full shadow-md hover:shadow-lg hover:scale-105 transition-all"
                 >
                   <span>Get Instant Access</span>
                   <ArrowRight className="w-4 h-4" />
@@ -965,72 +1029,72 @@ export default function Home() {
             </div>
 
             {/* 4 Competitors (2x2 Grid) */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-12 pt-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mt-9 sm:mt-12 pt-2">
               
               {/* 1. WATI */}
-              <div className="bg-white rounded-2xl border border-slate-200/90 p-5 sm:p-6 text-center shadow-xs hover:shadow-md transition-shadow">
-                <div className="flex items-center justify-center gap-2 mb-2">
+              <div className="bg-white rounded-xl sm:rounded-2xl border border-slate-200/90 p-4 sm:p-5 text-center shadow-2xs hover:shadow-sm transition-shadow">
+                <div className="flex items-center justify-center gap-2 mb-1.5 sm:mb-2">
                   <div className="w-5 h-5 rounded-md bg-[#25D366] text-white flex items-center justify-center text-xs">
                     💬
                   </div>
-                  <span className="text-lg sm:text-xl font-black tracking-tight text-slate-900">wati</span>
+                  <span className="text-base sm:text-lg font-black tracking-tight text-slate-900">wati</span>
                 </div>
-                <p className="text-3xl sm:text-4xl font-black text-slate-900">
-                  ₹12,499<span className="text-sm font-medium text-slate-500">/Month</span>
+                <p className="text-2xl sm:text-3xl font-black text-slate-900">
+                  ₹12,499<span className="text-xs sm:text-sm font-medium text-slate-500">/Month</span>
                 </p>
-                <p className="text-xs text-slate-500 font-medium mt-1">Pro plan</p>
-                <p className="text-xs sm:text-sm font-bold text-rose-600 mt-2">
+                <p className="text-[11px] sm:text-xs text-slate-500 font-medium mt-0.5">Pro plan</p>
+                <p className="text-xs sm:text-sm font-bold text-rose-600 mt-1.5">
                   + ₹3,299 per extra user
                 </p>
               </div>
 
               {/* 2. INTERAKT */}
-              <div className="bg-white rounded-2xl border border-slate-200/90 p-5 sm:p-6 text-center shadow-xs hover:shadow-md transition-shadow">
-                <div className="flex items-center justify-center gap-2 mb-2">
+              <div className="bg-white rounded-xl sm:rounded-2xl border border-slate-200/90 p-4 sm:p-5 text-center shadow-2xs hover:shadow-sm transition-shadow">
+                <div className="flex items-center justify-center gap-2 mb-1.5 sm:mb-2">
                   <div className="w-5 h-5 rounded-md bg-[#00A884] text-white flex items-center justify-center text-xs">
                     🛍️
                   </div>
-                  <span className="text-lg sm:text-xl font-black tracking-tight text-slate-900">interakt</span>
+                  <span className="text-base sm:text-lg font-black tracking-tight text-slate-900">interakt</span>
                 </div>
-                <p className="text-3xl sm:text-4xl font-black text-slate-900">
-                  ₹12,499<span className="text-sm font-medium text-slate-500">/Quarter</span>
+                <p className="text-2xl sm:text-3xl font-black text-slate-900">
+                  ₹12,499<span className="text-xs sm:text-sm font-medium text-slate-500">/Quarter</span>
                 </p>
-                <p className="text-xs text-slate-500 font-medium mt-1">Growth plan</p>
-                <p className="text-xs sm:text-sm font-bold text-rose-600 mt-2">
+                <p className="text-[11px] sm:text-xs text-slate-500 font-medium mt-0.5">Growth plan</p>
+                <p className="text-xs sm:text-sm font-bold text-rose-600 mt-1.5">
                   + 10% Markup
                 </p>
               </div>
 
               {/* 3. AISENSY */}
-              <div className="bg-white rounded-2xl border border-slate-200/90 p-5 sm:p-6 text-center shadow-xs hover:shadow-md transition-shadow">
-                <div className="flex items-center justify-center gap-2 mb-2">
+              <div className="bg-white rounded-xl sm:rounded-2xl border border-slate-200/90 p-4 sm:p-5 text-center shadow-2xs hover:shadow-sm transition-shadow">
+                <div className="flex items-center justify-center gap-2 mb-1.5 sm:mb-2">
                   <div className="w-5 h-5 rounded-md bg-emerald-500 text-white flex items-center justify-center text-xs">
                     ⚡
                   </div>
-                  <span className="text-lg sm:text-xl font-black tracking-tight text-slate-900">AiSensy</span>
+                  <span className="text-base sm:text-lg font-black tracking-tight text-slate-900">AiSensy</span>
                 </div>
-                <p className="text-3xl sm:text-4xl font-black text-slate-900">
-                  ₹8,299<span className="text-sm font-medium text-slate-500">/Month</span>
+                <p className="text-2xl sm:text-3xl font-black text-slate-900">
+                  ₹8,299<span className="text-xs sm:text-sm font-medium text-slate-500">/Month</span>
                 </p>
-                <p className="text-xs text-slate-500 font-medium mt-1">Pro plan</p>
-                <p className="text-xs sm:text-sm font-bold text-rose-600 mt-2">
+                <p className="text-[11px] sm:text-xs text-slate-500 font-medium mt-0.5">Pro plan</p>
+                <p className="text-xs sm:text-sm font-bold text-rose-600 mt-1.5">
                   + 20% Markup
                 </p>
               </div>
 
               {/* 4. GALLABOX */}
-              <div className="bg-white rounded-2xl border border-slate-200/90 p-5 sm:p-6 text-center shadow-xs hover:shadow-md transition-shadow">
-                <div className="flex items-center justify-center gap-2 mb-2">
+              <div className="bg-white rounded-xl sm:rounded-2xl border border-slate-200/90 p-4 sm:p-5 text-center shadow-2xs hover:shadow-sm transition-shadow">
+                <div className="flex items-center justify-center gap-2 mb-1.5 sm:mb-2">
                   <div className="w-5 h-5 rounded-md bg-blue-600 text-white flex items-center justify-center text-xs">
                     📦
                   </div>
-                  <span className="text-lg sm:text-xl font-black tracking-tight text-slate-900">gallabox</span>
+                  <span className="text-base sm:text-lg font-black tracking-tight text-slate-900">gallabox</span>
                 </div>
-                <p className="text-3xl sm:text-4xl font-black text-slate-900">
-                  ₹12,500<span className="text-sm font-medium text-slate-500">/Month</span>
+                <p className="text-2xl sm:text-3xl font-black text-slate-900">
+                  ₹12,500<span className="text-xs sm:text-sm font-medium text-slate-500">/Month</span>
                 </p>
-                <p className="text-xs text-slate-500 font-medium mt-1">Basic plan, billed quarterly</p>
-                <p className="text-xs sm:text-sm font-bold text-rose-600 mt-2">
+                <p className="text-[11px] sm:text-xs text-slate-500 font-medium mt-0.5">Basic plan, billed quarterly</p>
+                <p className="text-xs sm:text-sm font-bold text-rose-600 mt-1.5">
                   + 15% Markup
                 </p>
               </div>
@@ -1038,7 +1102,7 @@ export default function Home() {
             </div>
 
             {/* Bottom Proof & Trustline */}
-            <div className="text-center mt-8 space-y-1.5">
+            <div className="text-center mt-6 sm:mt-8 space-y-1.5">
               <p className="text-xs sm:text-sm text-slate-600 font-medium">
                 1-on-1 onboarding and free migration with WhatsApp experts
               </p>
@@ -1058,75 +1122,75 @@ export default function Home() {
       {/* ========================================================= */}
       {/* TESTIMONIALS SECTION */}
       {/* ========================================================= */}
-      <section id="testimonials" className="py-10 sm:py-16 md:py-20 bg-slate-50/50 relative border-t border-slate-100">
+      <section id="testimonials" className="py-8 sm:py-14 md:py-20 bg-slate-50/50 relative border-t border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 md:mb-12 gap-4">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-6 sm:mb-10 gap-3 sm:gap-4">
             <div>
               <span className="text-xs font-bold uppercase tracking-widest text-emerald-600 bg-emerald-50 border border-emerald-200/60 px-3 py-1 rounded-full">
                 TESTIMONIALS
               </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-3">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mt-2.5">
                 What Our Clients Say
               </h2>
-              <p className="text-slate-600 text-base mt-1">
+              <p className="text-slate-600 text-xs sm:text-sm md:text-base mt-1">
                 Real businesses. Real growth. Real results.
               </p>
             </div>
 
             {/* Navigation Arrows */}
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 self-end sm:self-auto">
               <button
                 onClick={() => setTestimonialIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1))}
-                className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-700 hover:bg-slate-100 transition-colors shadow-sm"
+                className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-700 hover:bg-slate-100 transition-colors shadow-2xs"
                 aria-label="Previous Testimonial"
               >
-                <ChevronLeft className="w-5 h-5" />
+                <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
               </button>
               <button
                 onClick={() => setTestimonialIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1))}
-                className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-700 hover:bg-slate-100 transition-colors shadow-sm"
+                className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-700 hover:bg-slate-100 transition-colors shadow-2xs"
                 aria-label="Next Testimonial"
               >
-                <ChevronRight className="w-5 h-5" />
+                <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
               </button>
             </div>
           </div>
 
           {/* Testimonial Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
             {testimonials.map((t, i) => (
               <div
                 key={i}
-                className="bg-white border border-slate-200/80 rounded-2xl p-7 flex flex-col justify-between shadow-sm hover:shadow-md transition-all relative group"
+                className="bg-white border border-slate-200/80 rounded-xl sm:rounded-2xl p-5 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-sm transition-all relative group"
               >
                 <div>
                   {/* Quote Icon */}
-                  <span className="text-4xl font-serif text-emerald-500 leading-none select-none">
+                  <span className="text-3xl sm:text-4xl font-serif text-emerald-500 leading-none select-none">
                     “
                   </span>
                   
-                  <p className="text-sm sm:text-base text-slate-700 mt-2 mb-6 leading-relaxed">
+                  <p className="text-xs sm:text-sm md:text-base text-slate-700 mt-1.5 mb-4 sm:mb-6 leading-relaxed">
                     &quot;{t.quote}&quot;
                   </p>
                 </div>
 
                 <div>
                   {/* Rating Stars */}
-                  <div className="flex items-center gap-1 mb-4 text-amber-400">
+                  <div className="flex items-center gap-1 mb-3 sm:mb-4 text-amber-400">
                     {[...Array(t.rating)].map((_, idx) => (
-                      <Star key={idx} className="w-4 h-4 fill-amber-400" />
+                      <Star key={idx} className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-amber-400" />
                     ))}
                   </div>
 
                   {/* Author */}
-                  <div className="flex items-center gap-3 pt-3 border-t border-slate-100">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-emerald-500 to-teal-700 text-white font-bold text-xs sm:text-sm flex items-center justify-center shadow-xs shrink-0 tracking-wider">
+                  <div className="flex items-center gap-3 pt-2.5 sm:pt-3 border-t border-slate-100">
+                    <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-emerald-500 to-teal-700 text-white font-bold text-xs sm:text-sm flex items-center justify-center shadow-2xs shrink-0 tracking-wider">
                       {t.initials}
                     </div>
                     <div>
-                      <h4 className="text-sm font-bold text-slate-900">{t.name}</h4>
-                      <p className="text-xs text-slate-500">{t.role}</p>
+                      <h4 className="text-xs sm:text-sm font-bold text-slate-900">{t.name}</h4>
+                      <p className="text-[11px] sm:text-xs text-slate-500">{t.role}</p>
                     </div>
                   </div>
                 </div>
@@ -1140,26 +1204,26 @@ export default function Home() {
       {/* ========================================================= */}
       {/* FAQ SECTION */}
       {/* ========================================================= */}
-      <section className="py-10 sm:py-16 md:py-20 bg-white relative">
+      <section className="py-8 sm:py-14 md:py-20 bg-white relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12">
             
             {/* Left Header Info */}
-            <div className="lg:col-span-5 space-y-4">
+            <div className="lg:col-span-5 space-y-3 sm:space-y-4">
               <span className="text-xs font-bold uppercase tracking-widest text-emerald-600 bg-emerald-50 border border-emerald-200/60 px-3 py-1 rounded-full">
                 FAQ
               </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
                 Frequently Asked Questions
               </h2>
-              <p className="text-slate-600 text-base">
+              <p className="text-slate-600 text-xs sm:text-sm md:text-base">
                 Quick answers to common queries.
               </p>
 
-              <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200 mt-6">
-                <p className="text-sm font-bold text-slate-800 mb-1">Still have questions?</p>
-                <p className="text-xs text-slate-600 mb-3">Our team is here to assist you 24/7.</p>
+              <div className="p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-slate-50 border border-slate-200 mt-4 sm:mt-6">
+                <p className="text-xs sm:text-sm font-bold text-slate-800 mb-0.5 sm:mb-1">Still have questions?</p>
+                <p className="text-xs text-slate-600 mb-2 sm:mb-3">Our team is here to assist you 24/7.</p>
                 <a
                   href="#contact"
                   className="text-xs font-bold text-emerald-600 hover:text-emerald-700 inline-flex items-center gap-1"
@@ -1171,7 +1235,7 @@ export default function Home() {
             </div>
 
             {/* Right Accordion List */}
-            <div className="lg:col-span-7 space-y-3">
+            <div className="lg:col-span-7 space-y-2.5 sm:space-y-3">
               {faqs.map((faq, i) => {
                 const isOpen = activeFaq === i;
                 return (
@@ -1181,16 +1245,16 @@ export default function Home() {
                   >
                     <button
                       onClick={() => setActiveFaq(isOpen ? null : i)}
-                      className="w-full text-left p-5 flex items-center justify-between gap-4 font-bold text-slate-800 hover:text-emerald-700 transition-colors"
+                      className="w-full text-left p-4 sm:p-5 flex items-center justify-between gap-3 sm:gap-4 font-bold text-xs sm:text-sm md:text-base text-slate-800 hover:text-emerald-700 transition-colors"
                     >
                       <span>{faq.question}</span>
-                      <span className={`w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center shrink-0 transition-transform ${isOpen ? "rotate-45 bg-emerald-100 text-emerald-700" : ""}`}>
+                      <span className={`w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-slate-100 flex items-center justify-center shrink-0 text-xs sm:text-sm transition-transform ${isOpen ? "rotate-45 bg-emerald-100 text-emerald-700" : ""}`}>
                         +
                       </span>
                     </button>
 
                     {isOpen && (
-                      <div className="px-5 pb-5 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3 animate-in fade-in duration-200">
+                      <div className="px-4 sm:px-5 pb-4 sm:pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-2.5 sm:pt-3 animate-in fade-in duration-200">
                         {faq.answer}
                       </div>
                     )}
@@ -1207,41 +1271,41 @@ export default function Home() {
       {/* ========================================================= */}
       {/* PRE-FOOTER BANNER (STATS & CTA) */}
       {/* ========================================================= */}
-      <section className="bg-[#04282B] text-white py-8 sm:py-12 relative overflow-hidden">
+      <section className="bg-[#04282B] text-white py-6 sm:py-10 relative overflow-hidden">
         {/* Background glow */}
         <div className="absolute top-0 right-1/4 w-80 h-80 bg-emerald-500/20 rounded-full blur-3xl pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-6 sm:gap-8">
             
             {/* CTA text */}
-            <div className="text-center lg:text-left space-y-2">
-              <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
+            <div className="text-center lg:text-left space-y-1.5 sm:space-y-2">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight">
                 Let&apos;s Build Something Bigger Together
               </h2>
-              <p className="text-emerald-200/90 text-sm sm:text-base">
+              <p className="text-emerald-200/90 text-xs sm:text-sm md:text-base">
                 Join thousands of businesses already growing with Gentro Technologies.
               </p>
             </div>
 
             {/* Button & Stats */}
-            <div className="flex flex-col sm:flex-row items-center gap-8">
+            <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8 w-full sm:w-auto">
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 bg-[#00D084] hover:bg-emerald-400 text-slate-950 font-bold text-sm sm:text-base px-7 py-3.5 rounded-full transition-all shadow-lg hover:scale-105 shrink-0 group"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#00D084] hover:bg-emerald-400 text-slate-950 font-bold text-xs sm:text-sm md:text-base px-6 py-3 sm:px-7 sm:py-3.5 rounded-full transition-all shadow-md hover:scale-105 shrink-0 group"
               >
                 <span>Get Started Now</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
 
-              <div className="flex items-center gap-6 sm:gap-8 border-t sm:border-t-0 sm:border-l border-emerald-800/80 pt-4 sm:pt-0 sm:pl-8">
+              <div className="flex items-center justify-center gap-6 sm:gap-8 border-t sm:border-t-0 sm:border-l border-emerald-800/80 pt-3 sm:pt-0 sm:pl-8 w-full sm:w-auto">
                 <div className="text-center">
-                  <p className="text-2xl sm:text-3xl font-black text-white">₹7,999</p>
-                  <p className="text-[11px] uppercase tracking-wider text-emerald-300 font-semibold">YEARLY PLAN</p>
+                  <p className="text-xl sm:text-3xl font-black text-white">₹7,999</p>
+                  <p className="text-[10px] sm:text-[11px] uppercase tracking-wider text-emerald-300 font-semibold">YEARLY PLAN</p>
                 </div>
                 <div className="text-center">
-                  <p className="text-2xl sm:text-3xl font-black text-white">₹0.15</p>
-                  <p className="text-[11px] uppercase tracking-wider text-emerald-300 font-semibold">STARTING PRICE / MESSAGE</p>
+                  <p className="text-xl sm:text-3xl font-black text-white">₹0.15</p>
+                  <p className="text-[10px] sm:text-[11px] uppercase tracking-wider text-emerald-300 font-semibold">PRICE / MESSAGE</p>
                 </div>
               </div>
             </div>
@@ -1253,10 +1317,10 @@ export default function Home() {
       {/* ========================================================= */}
       {/* FOOTER */}
       {/* ========================================================= */}
-      <footer id="contact" className="bg-[#03151E] text-slate-400 pt-10 sm:pt-16 pb-8 sm:pb-12 border-t border-slate-800">
+      <footer id="contact" className="bg-[#03151E] text-slate-400 pt-8 sm:pt-14 pb-8 sm:pb-10 border-t border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-10 pb-8 sm:pb-10 border-b border-slate-800">
             
             {/* Column 1: Brand & Bio */}
             <div className="lg:col-span-1 space-y-4">

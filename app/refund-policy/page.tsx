@@ -14,12 +14,12 @@ export default function RefundPolicyPage() {
 
       {/* Header / Nav */}
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.04)]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
           <Link href="/" className="flex items-center group">
             <img
               src="https://ik.imagekit.io/0s0fb4b2b/Gentro/Glossy%20Gentro%20Technologies%20Logo.png"
               alt="Gentro Technologies Logo"
-              className="h-12 sm:h-14 md:h-16 w-auto object-contain transition-transform group-hover:scale-105"
+              className="h-9 sm:h-12 md:h-16 w-auto object-contain transition-transform group-hover:scale-105"
             />
           </Link>
 
@@ -38,14 +38,14 @@ export default function RefundPolicyPage() {
             </Link>
           </nav>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
             <a
               href="https://calendar.app.google/HE3fCD4eECoADNaG8"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm px-5 py-2.5 rounded-full transition-all shadow-md"
+              className="inline-flex items-center gap-1.5 sm:gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full transition-all shadow-md"
             >
-              <Calendar className="w-4 h-4 text-emerald-100" />
+              <Calendar className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-100" />
               <span>Book Demo</span>
             </a>
           </div>
@@ -53,24 +53,24 @@ export default function RefundPolicyPage() {
       </header>
 
       {/* Hero Header */}
-      <div className="bg-gradient-to-b from-slate-900 via-[#071d24] to-[#04282B] text-white py-14 sm:py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-400/30 text-emerald-300 text-xs font-semibold">
+      <div className="bg-gradient-to-b from-slate-900 via-[#071d24] to-[#04282B] text-white py-8 sm:py-12 md:py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-2 sm:space-y-3">
+          <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-0.5 sm:py-1 rounded-full bg-emerald-500/10 border border-emerald-400/30 text-emerald-300 text-[11px] sm:text-xs font-semibold">
             <RefreshCcw className="w-3.5 h-3.5 text-emerald-400" />
             <span>TRANSPARENT BILLING</span>
           </div>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
+          <h1 className="text-2xl sm:text-3xl md:text-5xl font-extrabold tracking-tight">
             Cancellation & Refund Policy
           </h1>
-          <p className="text-slate-300 text-sm sm:text-base">
+          <p className="text-slate-300 text-xs sm:text-sm">
             Last Updated: {lastUpdated} | Applicable to all SaaS software licenses & messaging recharges.
           </p>
         </div>
       </div>
 
       {/* Policy Content */}
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-        <div className="prose prose-slate max-w-none space-y-8 text-slate-700 text-sm sm:text-base leading-relaxed">
+      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-12 md:py-16">
+        <div className="prose prose-slate max-w-none space-y-6 sm:space-y-8 text-slate-700 text-xs sm:text-base leading-relaxed">
           
           <section className="space-y-3">
             <h2 className="text-xl sm:text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2">
